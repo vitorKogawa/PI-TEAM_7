@@ -7,6 +7,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(user_router);
-sequelize.sync();
+sequelize.sync({ force: true });
 
 module.exports = { app: app };

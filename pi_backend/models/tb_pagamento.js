@@ -3,9 +3,9 @@ module.exports = (sequelize, DataTypes) => {
     id_pagamento: DataTypes.INTEGER,
     data_pagamento: DataTypes.DATE,
     hora_pagamento: DataTypes.TIME,
-    cod_usuario: DataTypes.INTEGER,
-    cod_jogo: DataTypes.INTEGER,
-    cod_tipo_pagamento: DataTypes.INTEGER
+    // cod_usuario: DataTypes.INTEGER,
+    // cod_jogo: DataTypes.INTEGER,
+    // cod_tipo_pagamento: DataTypes.INTEGER
   }, {});
 
   //UM pagamento pertence a UM  usuário 1:1

@@ -11,12 +11,10 @@ const db = {};
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 db.User = require('./models/tb_usuario')(sequelize, Sequelize);
-db.Endereco = require('./models/tb_endereco')(sequelize, Sequelize);
 db.Pagamento = require('./models/tb_pagamento')(sequelize, Sequelize);
 db.TipoPagamento = require('./models/tb_tipo_pagamento')(sequelize, Sequelize);
-db.Celular = require('./models/tb_celular')(sequelize, Sequelize);
-db.Genero = require('./models/tb_genero')(sequelize, Sequelize);
 db.Jogo = require('./models/tb_jogo')(sequelize, Sequelize);
 
+db.Pagamento.belongsTo(db.User, { foreignKey: 'cod_usuario' })
 
 module.exports = db;
