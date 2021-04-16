@@ -39,9 +39,30 @@ const create = (request, response) => {
   }
 };
 
-const deleteAll = (request, response) => {};
+const deleteAll = (request, response) => {
+  Usuario.destroy({ where: {}, truncate: true, force: true })
+    .then((data) =>
+      response.status(200).json({ message: "Registros eliminados." })
+    )
+    .catch((error) =>
+      response.status(500).json({
+        message: error.message || "Erro interno ao escluir registros.",
+      })
+    );
+};
 
-const deleteByPk = (request, response) => {};
+const deleteByPk = (request, response) => {
+  const { id } = request.params;
+  Usuario.destroy({ where: { id } })
+    .then((data) =>
+      response.status(200).json({ message: `Usuário de id ${id} removido.` })
+    )
+    .catch((error) =>
+      response.status(500).json({
+        message: error.message || `Erro interno ao remover usuário de id ${id}`,
+      })
+    );
+};
 
 const update = (request, response) => {};
 
@@ -52,14 +73,18 @@ const findByPk = (request, response) => {
       .json({ message: "Campo id não pode estar vazio." });
   } else {
     Usuario.findByPk(request.params.id)
-      .then((data) => data !== null ? response.status(200).json(data) : response.json({ message: `Usuário de id ${request.params.id} não encontrado.` }))
+      .then((data) =>
+        data !== null
+          ? response.status(200).json(data)
+          : response.json({
+              message: `Usuário de id ${request.params.id} não encontrado.`,
+            })
+      )
       .catch((error) =>
-        response
-          .status(500)
-          .json({
-            message:
-              error.message || `Erro interno ao buscar usuário de id: ${id}`,
-          })
+        response.status(500).json({
+          message:
+            error.message || `Erro interno ao buscar usuário de id: ${id}`,
+        })
       );
   }
 };
