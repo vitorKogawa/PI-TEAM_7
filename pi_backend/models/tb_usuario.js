@@ -8,11 +8,6 @@ module.exports = (sequelize, DataTypes) => {
     nome: DataTypes.STRING,
     cpf: DataTypes.STRING,
     email: DataTypes.STRING
-  }, {});
-
-  //UM usuário pode estar associado a VÁRIOS pagamentos
-  //UM usuário pode estar associado a VÁRIOS endereços
-  //UM usuário pode estar associado a VÁRIOS celulares
-  tb_usuario.associate = function(models){}
+  }, { freezeTableName: true });
   return tb_usuario;
 };
