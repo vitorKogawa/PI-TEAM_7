@@ -1,5 +1,6 @@
 const dbConfig = require("../connection");
 const { Op } = require("sequelize");
+const { response } = require("express");
 
 const Usuario = dbConfig.User;
 const op = Op;
@@ -48,11 +49,27 @@ const findByPk = (request, response) => {};
 
 const findAll = (request, response) => {
   Usuario.findAll()
-  .then(data => response.status(200).json(data))
-  .catch(error => response.status(500).json({ message: error.message || "Erro interno na listagem de usuários." }));
+    .then((data) => response.status(200).json(data))
+    .catch((error) =>
+      response
+        .status(500)
+        .json({
+          message: error.message || "Erro interno na listagem de usuários.",
+        })
+    );
 };
 
-const findAllEnable = (request, response) => {};
+const findAllEnable = (request, response) => {
+  Usuario.findAll({ where: { ativo: true } })
+    .then((data) => response.status(200).json(data))
+    .catch((error) =>
+      response
+        .status(500)
+        .json({
+          message: error.message || "Erro interno ao listar usuários ativos.",
+        })
+    );
+};
 
 const userExists = (email, cpf) => {
   const result = Usuario.findOne({
