@@ -2,7 +2,6 @@ module.exports = (sequelize, DataTypes) => {
   const tb_jogo = sequelize.define(
     "tb_jogo",
     {
-      id_jogo: DataTypes.INTEGER,
       nome: DataTypes.STRING,
       preco: DataTypes.DOUBLE,
       quantidade: DataTypes.INTEGER,
