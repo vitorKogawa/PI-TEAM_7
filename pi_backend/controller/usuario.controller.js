@@ -45,17 +45,32 @@ const deleteByPk = (request, response) => {};
 
 const update = (request, response) => {};
 
-const findByPk = (request, response) => {};
+const findByPk = (request, response) => {
+  if (!request.params.id) {
+    return response
+      .status(400)
+      .json({ message: "Campo id não pode estar vazio." });
+  } else {
+    Usuario.findByPk(request.params.id)
+      .then((data) => data !== null ? response.status(200).json(data) : response.json({ message: `Usuário de id ${request.params.id} não encontrado.` }))
+      .catch((error) =>
+        response
+          .status(500)
+          .json({
+            message:
+              error.message || `Erro interno ao buscar usuário de id: ${id}`,
+          })
+      );
+  }
+};
 
 const findAll = (request, response) => {
   Usuario.findAll()
     .then((data) => response.status(200).json(data))
     .catch((error) =>
-      response
-        .status(500)
-        .json({
-          message: error.message || "Erro interno na listagem de usuários.",
-        })
+      response.status(500).json({
+        message: error.message || "Erro interno na listagem de usuários.",
+      })
     );
 };
 
@@ -63,11 +78,9 @@ const findAllEnable = (request, response) => {
   Usuario.findAll({ where: { ativo: true } })
     .then((data) => response.status(200).json(data))
     .catch((error) =>
-      response
-        .status(500)
-        .json({
-          message: error.message || "Erro interno ao listar usuários ativos.",
-        })
+      response.status(500).json({
+        message: error.message || "Erro interno ao listar usuários ativos.",
+      })
     );
 };
 
