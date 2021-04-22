@@ -3,10 +3,23 @@ module.exports = app => {
 
     var router = require ("express").Router();
 
-    //Cria novo tutorial
+     //Criar jogos
     router.post("/", jogos.create);
-    //Retorna todos os tutoriais
+
+    //Listar todos os jogos
     router.get("/", jogos.findAll);
+
+     //Atualizar jogo por id
+    router.put("/:id", jogos.updateOne);
+
+    //Buscar jogo por id
+    router.get("/:id", jogos.findProdutoById);
+
+    //Deletar jogo por id
+    router.delete("/:id", jogos.deleteProduto);
+
+    // Deletar todos os jogos
+    router.delete("/", jogos.deleteAll);
 
     app.use('/api/jogos', routes)
 }
