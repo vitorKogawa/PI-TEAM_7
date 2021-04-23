@@ -29,6 +29,10 @@ module.exports = {
       cod_genero: {
         type: Sequelize.INTEGER
       },
+      status: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

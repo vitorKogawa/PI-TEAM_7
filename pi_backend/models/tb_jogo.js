@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
       descricao: DataTypes.STRING,
       espaco_arm: DataTypes.DOUBLE,
       genero: DataTypes.STRING,
+      status: DataTypes.BOOLEAN
     },
     { freezeTableName: true }
   );

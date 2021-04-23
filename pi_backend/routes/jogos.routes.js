@@ -1,25 +1,24 @@
-module.exports = app => {
-    const jogos = require ("../controllers/jogo.controller");
+const jogo_controller = require('../controller/jogo.controller');
+const { Router } = require('express');
 
-    var router = require ("express").Router();
+const jogo_router = Router();
 
-     //Criar jogos
-    router.post("/", jogos.create);
+//Criar jogo_controller
+jogo_router.post("/jogo", jogo_controller.create);
 
-    //Listar todos os jogos
-    router.get("/", jogos.findAll);
+//Listar todos os jogo_controller
+jogo_router.get("/jogo", jogo_controller.findAll);
 
-     //Atualizar jogo por id
-    router.put("/:id", jogos.updateOne);
+//Atualizar jogo por id
+jogo_router.put("/:id", jogo_controller.update);
 
-    //Buscar jogo por id
-    router.get("/:id", jogos.findProdutoById);
+//Buscar jogo por id
+jogo_router.get("/jogo/:id", jogo_controller.findByPk);
 
-    //Deletar jogo por id
-    router.delete("/:id", jogos.deleteProduto);
+//Deletar jogo por id
+jogo_router.put("/jogo/disable/:id", jogo_controller.disableByPk);
 
-    // Deletar todos os jogos
-    router.delete("/", jogos.deleteAll);
+// Deletar todos os jogo_controller
+jogo_router.put("/", jogo_controller.disableAll);
 
-    app.use('/api/jogos', routes)
-}
+module.exports = { jogo_router };
