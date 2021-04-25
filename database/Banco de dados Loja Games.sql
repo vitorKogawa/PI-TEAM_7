@@ -2,36 +2,20 @@ create database projetogrupo7;
 
 use projetogrupo7;
 
+create database projetogrupo7;
+
+use projetogrupo7;
+
 create table IF NOT EXISTS tb_jogo(
    ID_jogo int primary key auto_increment,
    Nome varchar (30) NOT NULL,
    Preco decimal NOT NULL,
    Quantidade int NOT NULL,
    Descricao varchar (60) NOT NULL,
-   Espaco_arm decimal NOT NULL
-);
-
-alter table tb_jogo add column cod_genero int not null;
-
-create table if not exists tb_celular(
-	COD_Usuario int not null,
-    Numero int not null
-);
-
-create table if not exists tb_genero(
-	ID_Genero int primary key auto_increment,
-    Descricao varchar(20) not null
-);
-
-CREATE TABLE IF NOT EXISTS tb_endereco(
-	ID_Endereco int primary key auto_increment,
-	COD_usuario int NOT NULL,
-	Logradouro varchar (30) NOT NULL,
-	Numero int NOT NULL,
-	Bairro varchar (30) NOT NULL,
-	Cep int NOT NULL,
-	Estado varchar (30) NOT NULL,
-	Cidade varchar (30) NOT NULL
+   Espaco_arm decimal NOT NULL,
+   cod_genero int NOT NULL,
+   cod_jogo int NOT NULL,
+   status_jogo boolean NOT NULL
 );
 
 create table IF NOT EXISTS tb_tipo_pagamento(
@@ -40,11 +24,12 @@ create table IF NOT EXISTS tb_tipo_pagamento(
 );
 
 create table IF NOT EXISTS tb_pagamento(
-	ID_Pagamento int primary key auto_increment,
-    Data_Pagameto date not null,
-    Hora_Pagameto time not null,
-    Cod_Usuario	int not null,
-    Cod_Tipo_Pagamento	int not null
+	id_Pagamento int primary key auto_increment,
+    data_Pagamento date not null,
+    hora_Pagamento time not null,
+    cod_usuario	int not null,
+    cod_tipo_pagamento	int not null,
+    cod_jogo int not null
 );
 
 Create table IF NOT EXISTS tb_usuario(
@@ -58,13 +43,7 @@ Create table IF NOT EXISTS tb_usuario(
 	Email Varchar (30) NOT NULL
 );
 
-alter table tb_jogo add foreign key (cod_genero) references tb_genero (ID_Genero);
-
 alter table tb_pagamento add foreign key (Cod_Usuario) references tb_usuario (ID_usuario);
-
-alter table tb_endereco add foreign key (COD_usuario) references tb_usuario (ID_usuario);
-
-alter table tb_celular add foreign key (COD_usuario) references tb_usuario (ID_usuario);
 
 alter table tb_pagamento add foreign key (Cod_Tipo_Pagamento) references tb_tipo_pagamento (ID_Tipo_Pagamento);
 
