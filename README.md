@@ -5,6 +5,7 @@
 - Bruna Pianco
 - Jade Machado
 - Matheus Fontenele
+- Patrícia Martins
 - Vitor Kogawa
 
 Este projeto esta sendo desenvolvido durante o programa de estágio Decola Dev da Avanade, junto a Digital House.
