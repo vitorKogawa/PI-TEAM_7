@@ -2,13 +2,12 @@ const { Sequelize } = require("sequelize");
 const { development, production, test } = require("./config/database.config");
 
 const sequelize = new Sequelize(
-  development.database,
-  development.username,
-  development.password,
-  {
-    host: development.host,
-    dialect: development.dialect,
-  }
+    development.database,
+    development.username,
+    development.password, {
+        host: development.host,
+        dialect: development.dialect,
+    }
 );
 
 const db = {};
