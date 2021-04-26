@@ -28,7 +28,7 @@ class User extends Model {
     return this;
   }
 
-  verifyPassword = (password) => compare(password, user.senha_hash);
+  verifyPassword = (password) => compare(password, this.senha_hash);
 }
 
 export default User;

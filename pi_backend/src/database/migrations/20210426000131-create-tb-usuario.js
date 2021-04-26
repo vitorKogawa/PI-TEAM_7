@@ -1,52 +1,52 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('tb_jogos', {
+    await queryInterface.createTable('tb_usuario', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      usuario: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      senha_hash: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      ativo: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false
+      },
+      status_adm: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false
+      },
       nome: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      preco: {
-        type: Sequelize.DOUBLE, 
-        allowNull: false
-      },
-      quantidade: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
-      descricao: {
+      cpf: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      espaco_arm: {
-        type: Sequelize.DOUBLE,
-        allowNull: false
-      },
-      genero: {
+      email: {
         type: Sequelize.STRING,
         allowNull: false
-      },
-      status: {
-        type: Sequelize.BOOLEAN,
-        allowNull: false,
       },
       createdAt: {
+        type: Sequelize.DATE,
         allowNull: false,
-        type: Sequelize.DATE
       },
       updatedAt: {
+        type: Sequelize.DATE,
         allowNull: false,
-        type: Sequelize.DATE
       }
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('tb_jogos');
+    await queryInterface.dropTable('tb_usuario');
   }
 };

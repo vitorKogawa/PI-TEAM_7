@@ -1,24 +1,7 @@
 import User from "../models/tb_usuario";
-import { Op } from 'sequelize';
+import { Op } from "sequelize";
 
 class UserController {
-  async userExists(email, cpf) {
-    const user = await User.findOne({
-      where: {
-        [Op.or]: [
-          { email },
-          { cpf }
-        ]
-      }
-    })
-
-    if(user){
-      return false;
-    }else{
-      return true;
-    }
-  }
-
   async create(request, response) {
     const {
       usuario,
@@ -34,7 +17,16 @@ class UserController {
         .status(400)
         .json({ message: "Campo email e cpf não pode estar vazio!" });
     } else {
-      if (await userExists(email, cpf)) {
+      const userExists = await User.findOne({
+        where: { [Op.or]: [{ email }, { cpf }] },
+      })
+        .then((data) => (data ? true : false))
+        .catch((error) => {
+          console.error(error.message);
+          return false;
+        });
+
+      if (!userExists) {
         const newUser = {
           usuario,
           senha,
@@ -87,7 +79,25 @@ class UserController {
       );
   }
 
-  async update(request, response) {}
+  async update(request, response) {
+    const { email, oldPassword } = request.body;
+
+    const user = await User.findByPk(request.userId);
+
+    if (email && email !== user.email) {
+      const userExists = await User.findOne({ where: { email } });
+      if (userExists) {
+        return response.status(400).json({ message: "Email já em uso." });
+      }
+    }
+
+    if (oldPassword && !(await user.verifyPassword(oldPassword))) {
+      return response.status(400).json({ message: "Senha inválida." });
+    }
+
+    const { id, nome, usuario, ativo, status_adm } = await user.update(request.body);
+    return response.status(200).json({ id, nome, usuario, ativo, status_adm });
+  }
 
   async findAll(request, response) {
     await User.findAll()
@@ -105,7 +115,7 @@ class UserController {
         .status(400)
         .json({ message: "Campo id não pode estar vazio." });
     } else {
-      Usuario.findByPk(request.params.id)
+      await User.findByPk(request.params.id)
         .then((data) =>
           data !== null
             ? response.status(200).json(data)

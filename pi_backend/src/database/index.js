@@ -1,11 +1,11 @@
 const { Sequelize } = require("sequelize");
-const { developement } = require("../config/database.config");
+const dbConfig = require("../config/database.config");
 import User from "../models/tb_usuario";
-import Pagamento from "../models/tb_pagamento";
-import TipoPagamento from "../models/tb_tipo_pagamento";
-import Jogo from "../models/tb_jogo";
+// import Pagamento from "../models/tb_pagamento";
+// import TipoPagamento from "../models/tb_tipo_pagamento";
+// import Jogo from "../models/tb_jogo";
 
-const models = [User, Pagamento, TipoPagamento, Jogo];
+const models = [ User ];
 
 class Database {
   constructor() {
@@ -13,7 +13,7 @@ class Database {
   }
 
   init() {
-    this.connection = new Sequelize(developement);
+    this.connection = new Sequelize(dbConfig);
     models.map((model) => model.init(this.connection));
   }
 }
