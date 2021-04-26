@@ -1,4 +1,4 @@
-const { response } = require("express");
+const { response, request } = require("express");
 const dbConfig = require("../connection");
 
 const pagamento = dbConfig.Pagamento;
@@ -13,7 +13,9 @@ const create = (request, response) => {
     }
     const pagamentos = {
         data_pagamento: request.body.data_pagamento,
-        hora_pagamento: request.body.hora_pagamento
+        hora_pagamento: request.body.hora_pagamento,
+        cod_tipo_pagamento: request.body.cod_tipo_pagamento,
+        cod_usuario: request.body.cod_usuario
     };
 
     pagamento.create(pagamentos)
@@ -55,8 +57,18 @@ const update = (request, response) => {
 
 }
 
+const findAll = (request, response) => {
+    pagamento.findAll()
+    .then((data) => {
+        return response.json(data);
+    })
+    .catch((err) => {
+        response.status(500).json({ error: err.message || "erro na leitura de pagamentos" })
+    })
+}
+
 const findAllByUserPk = (request, response) => {
-    const user_id = request.body.user_id;
+    const user_id = request.params.id;
 
     if (!(user_id != null && user_id != undefined)) {
         return response.status(400).json({ error: `erro ao buscar pelo id de usuario ${user_id}` })
@@ -91,6 +103,7 @@ module.exports = {
     update,
     findByPk,
     findAllByUserPk,
-    deleteByPk
+    deleteByPk,
+    findAll
 
 }
