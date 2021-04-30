@@ -1,31 +1,36 @@
-const {Pagamento} = require("../connection");
-const dbConfig = require("../connection");
+import Pagamento from '../models/tb_pagamento';
+import { Op } from "sequelize"
 
-const Pagamento = dbConfig.Pagamento;
+class PagamentoController{
+    async create(request, response){
+        const {
+            data_pagamento,
+            hora_pagamento,
+            cod_tipo_pagamento,
+            cod_usuario
+        } = request.body;
+        const newPagamento = {
+            data_pagamento,
+            hora_pagamento,
+            cod_tipo_pagamento,
+            cod_usuario
+        }
+        if (!request.body.data_pagamento){
+            return response
+            .status(400)
+            .json ({message: "A data não pode estar vazia"});
+        }
 
-const update = (request, response) => {
-
-}
-
-const findAllByUserPk = (request, response) => {
-    const user_id = request.body.user_id;
-
-    if(!(user_id != null && user_id != undefined)){
-        return response.status(400).json({error: `erro ao buscar pelo id de usuario ${user_id}`})
-    } 
-    else {
-        Pagamento.findAll({where:{cod_usuario: user_id}})
+        await Pagamento.create(newPagamento)
         .then((data) => {
-            response.json(data)
+            return response.send(data);
         })
         .catch((err) => {
-            response.status(500).json({error: err.message || "erro na leitura de pagamentos"})
-        })
-    }
+            return response.status(500).send({
+                message: err.message || "Erro interno ao criar pagamento",
+            });
+        });
+    };
 }
 
-
-
-module.exports = {
-
-}
+export default new PagamentoController();
