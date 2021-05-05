@@ -1,10 +1,11 @@
-const { Router } = require("express");
-const tipo_pagamento_router = Router();
-const tipoPagamento = require("../controller/tipo_pagamento.controller");
+import { Router } from 'express';
+import TipoPagamentoController from '../controller/tipo_pagamento.controller';
 
-tipo_pagamento_router.post("/tipoPagamento/", tipoPagamento.create);
-tipo_pagamento_router.get("/tipoPagamento/", tipoPagamento.findAll);
-tipo_pagamento_router.delete("/tipoPagamento/:id",tipoPagamento.deleteByPk);
-tipo_pagamento_router.put("/tipoPagamento/:id",tipoPagamento.update);
+const tipoPagamentoRouter = Router();
 
-module.exports = { tipo_pagamento_router };
+tipoPagamentoRouter.post("/tipoPagamento/", TipoPagamentoController.create);
+tipoPagamentoRouter.get("/tipoPagamento/", TipoPagamentoController.findAll);
+tipoPagamentoRouter.delete("/tipoPagamento/:id",TipoPagamentoController.deleteByPk);
+tipoPagamentoRouter.put("/tipoPagamento/:id",TipoPagamentoController.update);
+
+export { tipoPagamentoRouter }

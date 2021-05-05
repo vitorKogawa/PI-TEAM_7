@@ -3,6 +3,7 @@ import cors from "cors";
 import { userRouter } from "./routes/users.routes";
 import { authRouter } from './routes/authenticate.routes';
 import { pagamentoRouter } from './routes/pagamento.routes';
+import { tipoPagamentoRouter } from './routes/tipo_pagamento.routes';
 import { jogoRouter } from './routes/jogos.routes';
 import "./database/index";
 
@@ -24,6 +25,7 @@ class App {
         this.server.use(authRouter);
         this.server.use(pagamentoRouter);
         this.server.use(jogoRouter);
+        this.server.use(tipoPagamentoRouter);
     }
 }
 
