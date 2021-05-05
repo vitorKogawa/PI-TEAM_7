@@ -1,10 +1,10 @@
-import jogo_controller from "../controller/jogo.controller";
-import  {Router} from "express";
+import JogoController from "../controller/JogoController";
+import { Router } from "express";
 
-const router = new Router();
+const jogoRouter = new Router();
 
 //Criar jogo_controller
-router.post("/jogo", jogo_controller.store);
+jogoRouter.post("/jogo", JogoController.store);
 
 //Listar todos os jogo_controller
 // jogo_router.get("/jogo", jogo_controller.findAll);
@@ -21,4 +21,4 @@ router.post("/jogo", jogo_controller.store);
 // // Deletar todos os jogo_controller
 // jogo_router.put("/", jogo_controller.disableAll);
 
-export {router}
+export { jogoRouter }

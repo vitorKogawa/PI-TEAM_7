@@ -38,7 +38,10 @@ class UserController {
         };
 
         await User.create(newUser)
-          .then((data) => response.status(200).json(data))
+          .then((data) => {
+            console.log(data)
+            return response.status(200).json(data)
+          })
           .catch((error) =>
             response.status(500).json({
               message:
