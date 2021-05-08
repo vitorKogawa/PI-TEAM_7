@@ -4,7 +4,8 @@ class Pagamento extends Model {
   static init(sequelize) {
     super.init(
       {
-        id: Sequelize.INTERGER,
+        data_pagamento: Sequelize.DATE,
+        hora_pagamento : Sequelize.DATE,
       },
       { sequelize, tableName: "tb_pagamento" }
     );
