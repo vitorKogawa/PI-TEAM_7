@@ -11,26 +11,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //modules//
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { MatCardModule, } from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { MatToolbarModule }  from '@angular/material/toolbar'
-
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { PagamentoComponent } from './views/pagamento/pagamento.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    PagamentoComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,10 +48,9 @@ import { MatToolbarModule }  from '@angular/material/toolbar'
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule   
-    
-    ],
+    MatSortModule,
+  ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
