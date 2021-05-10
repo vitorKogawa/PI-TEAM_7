@@ -1,24 +1,44 @@
 mat-card {
-  background-color: black;
-  opacity: 0.5;
-  max-width: 400px;
-  margin: 2em auto;
-  text-align: center;
-  max-height: 600px;
+  background-color: #9f9f9f;
+  width: 30%;
+  height: 770px;
 }
 
+.container {
+  background-image: url('/assets/img/mario.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
 .login {
+  color: black;
   font-size: 3vw;
+  text-align: center;
+
+
+}
+
+.aLink {
+  color: white;
+  font-size: 11px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 10px;
 
 }
 
 form {
   display: flex;
   flex-direction: column;
+
 }
 
 button {
-  color: blue;
-  margin-top: 20px;
-  margin-right: 15px;
+  width: 100%;
+  color: white;
+  margin-top: 10px;
+  background-color: turquoise;
 }

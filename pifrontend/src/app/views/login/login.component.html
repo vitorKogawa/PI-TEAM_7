@@ -1,4 +1,5 @@
-<mat-card>
+<div class="container">
+<mat-card>  
     <mat-card-title class="login">Login  
     </mat-card-title>
     <form>
@@ -9,7 +10,9 @@
             <input matInput placeholder="Senha" >
         </mat-form-field>
     </form>
-    <button mat-button>
+        <a class="aLink" routerLink="">Recuperar senha?</a>
+    <button mat-raised-button (click)="navigateToHome()">
         Login
     </button>
 </mat-card>
+</div>
