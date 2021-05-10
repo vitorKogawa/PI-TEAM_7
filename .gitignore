@@ -1,2 +1,3 @@
 pi_backend/node_modules
-pi_backend/.env
+pifrontend/node_modules
+.env
