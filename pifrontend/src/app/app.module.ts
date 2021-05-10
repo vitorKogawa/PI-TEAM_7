@@ -26,7 +26,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { PagamentoComponent } from './views/pagamento/pagamento.component';
 import { MatSelectModule } from '@angular/material/select';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +39,7 @@ import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste
     HomeComponent,
     LoginComponent,
     PagamentoComponent,
-    CarrouselTesteComponent,
+    CarrouselTesteComponent
   ],
   imports: [
     BrowserModule,
@@ -55,9 +59,10 @@ import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste
     MatPaginatorModule,
     MatSortModule,
     MatSelectModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
