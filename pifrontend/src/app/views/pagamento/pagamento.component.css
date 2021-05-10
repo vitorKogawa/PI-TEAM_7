@@ -1,0 +1,79 @@
+.pay-page {
+    padding: 30px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    margin: 20px 0px;
+    text-align: center;
+    color: #939393;
+    font-weight: 400;
+}
+
+.numero-boleto {
+    color: #212121;
+    font-weight: bold;
+    text-align: center;
+    line-height: 27px;
+    font-size: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.pay-card-container {
+    background-color: #212121;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mat-form-field-content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.mat-form-field-content>.icon {
+    font-size: 20px;
+}
+
+button {
+    background-color: #4a8040;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.pay-button {
+    font-size: 20px;
+}
+
+.imprimir-button {
+    font-size: 40px;
+}
+
+@media (max-width: 576px) {
+    .pay-button {
+        padding: 10px;
+    }
+    .numero-boleto {
+        font-size: 25px;
+        line-height: 27px;
+    }
+}
+
+@media (min-width: 992px) {
+    .pay-button,
+    .imprimir-button {
+        /* width: 50%; */
+        align-content: center;
+    }
+}

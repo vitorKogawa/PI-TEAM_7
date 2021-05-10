@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-carrousel-teste',
+  templateUrl: './carrousel-teste.component.html',
+  styleUrls: ['./carrousel-teste.component.css']
+})
+export class CarrouselTesteComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}

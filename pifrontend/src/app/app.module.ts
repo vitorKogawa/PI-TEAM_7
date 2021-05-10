@@ -7,7 +7,7 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { HomeComponent } from './views/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './views/login/login.component'
+import { LoginComponent } from './views/login/login.component';
 
 //modules//
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -24,6 +24,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { PagamentoComponent } from './views/pagamento/pagamento.component';
+import { MatSelectModule } from '@angular/material/select';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +35,7 @@ import { PagamentoComponent } from './views/pagamento/pagamento.component';
     HomeComponent,
     LoginComponent,
     PagamentoComponent,
+    CarrouselTesteComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,9 @@ import { PagamentoComponent } from './views/pagamento/pagamento.component';
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSelectModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
