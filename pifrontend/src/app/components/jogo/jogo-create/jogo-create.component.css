@@ -1,0 +1,59 @@
+mat-card {
+   width: 30%;
+   height: 850px;
+   background-color:#9F9F9F ;
+   
+}
+
+.container{
+    background-image: url('/assets/img/tela_cadastro.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+mat-card-title{
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 14px;
+    margin: 5px;
+    height: 30px;
+    width: 100%;
+}
+
+@media (max-width: 575px) {
+    button{
+        align-content: center;
+    }
+    mat-card{
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) { 
+    button{
+        align-content: center;
+    }
+
+}
+
+@media (min-width: 992px) { 
+    button{
+        align-content: center;
+    }
+
+ }
+

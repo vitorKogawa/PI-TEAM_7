@@ -24,6 +24,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { PagamentoComponent } from './views/pagamento/pagamento.component';
+import { JogoCrudComponent } from './views/jogo-crud/jogo-crud.component';
+import { JogoCreateComponent } from './components/jogo/jogo-create/jogo-create.component';
+import {MatSelectModule} from '@angular/material/select'
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +37,8 @@ import { PagamentoComponent } from './views/pagamento/pagamento.component';
     HomeComponent,
     LoginComponent,
     PagamentoComponent,
+    JogoCrudComponent,
+    JogoCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +56,8 @@ import { PagamentoComponent } from './views/pagamento/pagamento.component';
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
