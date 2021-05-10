@@ -113,7 +113,7 @@ class JogoController {
     //   }
     // };
 
-    // async findAllEnable = (request, responseponse) => {
+    //async findAllEnable = (request, responseponse) => {
     //   Jogo.findAll({ where: { ativo: true } })
     //     .then((data) => responseponse.status(200).json(data))
     //     .catch((error) =>
