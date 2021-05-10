@@ -17,7 +17,7 @@ export class JogoCreateComponent implements OnInit {
     preco: NaN,
     quantidade: NaN,
     descricao: '',
-    cod_genero: NaN,
+    cod_genero: '',
     espaco_arm: NaN,
   }
 

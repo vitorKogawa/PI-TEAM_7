@@ -1,15 +1,21 @@
 mat-card {
    width: 30%;
    height: 850px;
-   background-color:#9F9F9F ;
-   
+   background-color:#9F9F9F;
+}
+
+mat-card-title{
+    margin-top: 50px;
 }
 
 .container{
-    background-image: url('/assets/img/tela_cadastro.png');
+    background-image: url('/assets/img/tela_cadastro.png') ;
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px;
 }
 
 mat-card-title{
@@ -40,14 +46,19 @@ button {
     }
     mat-card{
         width: 100%;
+        height: 600px;
     }
 }
 
-@media (min-width: 768px) { 
+@media (max-width: 768px) { 
     button{
         align-content: center;
     }
 
+    mat-card{
+        width: 100%;
+        height: 600px;
+    }
 }
 
 @media (min-width: 992px) { 

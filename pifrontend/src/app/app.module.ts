@@ -7,7 +7,7 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { HomeComponent } from './views/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './views/login/login.component'
+import { LoginComponent } from './views/login/login.component';
 
 //modules//
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -26,7 +26,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { PagamentoComponent } from './views/pagamento/pagamento.component';
 import { JogoCrudComponent } from './views/jogo-crud/jogo-crud.component';
 import { JogoCreateComponent } from './components/jogo/jogo-create/jogo-create.component';
-import {MatSelectModule} from '@angular/material/select'
+import { MatSelectModule } from '@angular/material/select'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
 
 
 @NgModule({
@@ -39,6 +42,9 @@ import {MatSelectModule} from '@angular/material/select'
     PagamentoComponent,
     JogoCrudComponent,
     JogoCreateComponent,
+
+    CarrouselTesteComponent
+
   ],
   imports: [
     BrowserModule,
@@ -57,9 +63,11 @@ import {MatSelectModule} from '@angular/material/select'
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatSelectModule
+    MatSelectModule,
+    FontAwesomeModule,
+    NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

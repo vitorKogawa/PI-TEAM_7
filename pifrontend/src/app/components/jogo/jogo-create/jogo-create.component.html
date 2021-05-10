@@ -1,9 +1,9 @@
 <div class="container">
     <mat-card class="pay-card-container mat-elevation-z4">
-        <mat-card-title>
-            Novo Produto
-        </mat-card-title>
         <form>
+            <mat-card-title>
+                Novo Jogo
+            </mat-card-title>
             <mat-form-field>
                 <input matInput placeholder="Nome do jogo" [(ngModel)]="jogo.nome" name="nome">
             </mat-form-field>
@@ -22,10 +22,10 @@
             <mat-form-field>
                 <input matInput placeholder="Espaço de armazemamento" [(ngModel)]="jogo.espaco_arm" name="espaco">
             </mat-form-field>
-            <button mat-raised-button (click)="createJogo()" color="accent">
+            <button mat-raised-button (click)="createJogo()" color="basic">
                 SALVAR
             </button>
-            <button mat-raised-button (click)="cancel()" color="warn">
+            <button mat-raised-button (click)="cancel()" color="basic">
                 CANCELAR
             </button>
         </form>

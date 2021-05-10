@@ -5,7 +5,7 @@ export interface Jogo {
       preco: number
       quantidade: number
       descricao: string
-      cod_genero: number
+      cod_genero: string
       espaco_arm: number
        
 }
