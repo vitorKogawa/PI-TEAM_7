@@ -7,6 +7,7 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { HomeComponent } from './views/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './views/login/login.component'
 
 //modules//
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -21,7 +22,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { MatToolbarModule }  from '@angular/material/toolbar'
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 
 
@@ -30,7 +32,8 @@ import { MatToolbarModule }  from '@angular/material/toolbar'
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +51,9 @@ import { MatToolbarModule }  from '@angular/material/toolbar'
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule   
-    
-    ],
+    MatSortModule
+
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
