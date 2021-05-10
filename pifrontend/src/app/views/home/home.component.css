@@ -1,0 +1,19 @@
+.generos {
+    display: flex;
+}
+
+.home {
+    margin:30px;
+    width: 200px;
+    height: 200px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.carrossel {
+    border: 1px solid red;
+}
