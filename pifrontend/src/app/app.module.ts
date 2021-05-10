@@ -23,25 +23,15 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatToolbarModule } from '@angular/material/toolbar';
-<<<<<<< HEAD
-
-
-
-=======
 import { PagamentoComponent } from './views/pagamento/pagamento.component';
->>>>>>> ffa35300766b0699ef2a53b5bbcae28f4f8427b7
-
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-<<<<<<< HEAD
-    LoginComponent
-=======
+    LoginComponent,
     PagamentoComponent,
->>>>>>> ffa35300766b0699ef2a53b5bbcae28f4f8427b7
   ],
   imports: [
     BrowserModule,
@@ -59,12 +49,7 @@ import { PagamentoComponent } from './views/pagamento/pagamento.component';
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-<<<<<<< HEAD
     MatSortModule
-
-=======
-    MatSortModule,
->>>>>>> ffa35300766b0699ef2a53b5bbcae28f4f8427b7
   ],
   providers: [],
   bootstrap: [AppComponent],
