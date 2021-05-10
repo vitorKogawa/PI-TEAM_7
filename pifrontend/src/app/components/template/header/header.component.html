@@ -1,13 +1,9 @@
 <mat-toolbar class="header mat-elevation-z4">
-    <div class="container">
-        <a routerLink="/" class="logo">
-            <img src="assets/img/AVAGAMES-logo.png" alt="AVAGAMES-logo">
-            <mat-toolbar class="toolbar" mode="side" opened fixedInViewport="true">
-                <mat-toolbar-row class="nav-list">
-                    <a mat-list-item routerLink="/">HOME</a>
-                    <a mat-list-item routerLink="/jogos">CADASTRO DE JOGOS</a>
-                </mat-toolbar-row>
-            </mat-toolbar>
-        </a>
+    <a class="logo">
+        <img src="../../../../assets/img/AVAGAMES-logo.png" alt="Logo da Avagames">
+    </a>
+    <div class="nav-item-container">
+        <a>Home</a>
+        <a *ngIf="status_adm">Cadastro de jogos</a>
     </div>
 </mat-toolbar>

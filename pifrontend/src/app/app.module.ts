@@ -12,20 +12,24 @@ import { LoginComponent } from './views/login/login.component'
 //modules//
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { MatCardModule, } from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatToolbarModule } from '@angular/material/toolbar';
+<<<<<<< HEAD
 
 
 
+=======
+import { PagamentoComponent } from './views/pagamento/pagamento.component';
+>>>>>>> ffa35300766b0699ef2a53b5bbcae28f4f8427b7
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     FooterComponent,
     HeaderComponent,
     HomeComponent,
+<<<<<<< HEAD
     LoginComponent
+=======
+    PagamentoComponent,
+>>>>>>> ffa35300766b0699ef2a53b5bbcae28f4f8427b7
   ],
   imports: [
     BrowserModule,
@@ -51,10 +59,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
+<<<<<<< HEAD
     MatSortModule
 
+=======
+    MatSortModule,
+>>>>>>> ffa35300766b0699ef2a53b5bbcae28f4f8427b7
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
