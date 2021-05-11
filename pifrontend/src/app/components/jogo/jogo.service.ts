@@ -8,7 +8,7 @@ import { Jogo } from './jogo.model';
   providedIn: 'root'
 })
 export class JogoService {
-  baseUrl = 'http://127.0.0.1:3333'
+  baseUrl = 'http://localhost:3000/jogos'
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }
@@ -17,12 +17,30 @@ export class JogoService {
     this.snackBar.open(msg,'X',{
       duration:3000,
       horizontalPosition:'right',
-      verticalPosition:'top'
+      verticalPosition:'top' 
     })
   }
   //conexao com o backend
+  //cadastro do jogo
   create(jogo: Jogo):Observable<Jogo> {
     return this.http.post<Jogo>(this.baseUrl, jogo)
+  }
+  
+  //filtrando o jogo
+  read(): Observable<Jogo[]>{
+    return this.http.get<Jogo[]>(this.baseUrl)
+  }
+
+  //buscando por id
+  readById(id: string): Observable<Jogo> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Jogo>(url)
+  }
+
+  //alteração do jogo
+  update(jogo:Jogo): Observable<Jogo> {
+    const url = `${this.baseUrl}/${jogo.id}`
+    return this.http.put<Jogo>(url, jogo)
   }
 
 }

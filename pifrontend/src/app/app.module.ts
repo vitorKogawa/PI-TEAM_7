@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,11 +30,22 @@ import { MatSelectModule } from '@angular/material/select';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
+import { JogoReadComponent } from './components/jogo/jogo-read/jogo-read.component';
+
+
+
+//para a moeda BR//
+import  localePt  from '@angular/common/locales/pt'
+import { registerLocaleData } from '@angular/common'
+registerLocaleData (localePt);
+
 import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
 import { BarrapesquisaComponent } from './components/template/barrapesquisa/barrapesquisa.component';
 import { CardSliderComponent } from './views/home/components/card-slider/card-slider.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FeaturedGameComponent } from './views/home/components/featured-game/featured-game.component';
+
+
 
 @NgModule({
   declarations: [
@@ -47,12 +58,12 @@ import { FeaturedGameComponent } from './views/home/components/featured-game/fea
     JogoCrudComponent,
     JogoCreateComponent,
     CarrouselTesteComponent,
+    JogoReadComponent,
+    CarrouselTesteComponent,
     CarouselCardsComponent,
     BarrapesquisaComponent,
 
-    CarouselCardsComponent,
-    CardSliderComponent,
-    FeaturedGameComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -77,7 +88,10 @@ import { FeaturedGameComponent } from './views/home/components/featured-game/fea
     NgbModule,
     MatIconModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent],
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: 'pt-BR'
+  }],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
