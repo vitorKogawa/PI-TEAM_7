@@ -36,7 +36,6 @@ import { BarrapesquisaComponent } from './components/template/barrapesquisa/barr
 import { CardSliderComponent } from './views/home/components/card-slider/card-slider.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FeaturedGameComponent } from './views/home/components/featured-game/featured-game.component';
-
 //para a moeda BR//
 import  localePt  from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common'
@@ -57,8 +56,8 @@ registerLocaleData (localePt);
     CarrouselTesteComponent,
     CarouselCardsComponent,
     BarrapesquisaComponent,
-
-
+    CardSliderComponent,
+    FeaturedGameComponent
   ],
   imports: [
     BrowserModule,
@@ -82,8 +81,6 @@ registerLocaleData (localePt);
     NgbModule,
     NgbModule,
     MatIconModule,
-    CardSliderComponent,
-    FeaturedGameComponent
   ],
   providers: [{
     provide: LOCALE_ID,
