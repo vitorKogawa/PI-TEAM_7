@@ -14,7 +14,7 @@ const routes: Routes = [
     component: PagamentoComponent
   },
   {
-    path: '',
+    path: 'home',
     component: HomeComponent
   },
   {
