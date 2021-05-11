@@ -40,6 +40,17 @@ button {
     width: 100%;
 }
 
+::ng-deep .mat-focused .mat-form-field-label {
+    color: #f28705 !important;
+  }
+  ::ng-deep.mat-form-field-underline {
+    background-color: white !important;
+  }
+  ::ng-deep.mat-form-field-ripple {
+    background-color: #F28705 !important;
+    ;
+  }
+
 @media (max-width: 575px) {
     button{
         align-content: center;

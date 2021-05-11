@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +30,14 @@ import { MatSelectModule } from '@angular/material/select'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
+import { JogoReadComponent } from './components/jogo/jogo-read/jogo-read.component';
+
+
+
+//para a moeda BR//
+import  localePt  from '@angular/common/locales/pt'
+import { registerLocaleData } from '@angular/common'
+registerLocaleData (localePt);
 
 
 @NgModule({
@@ -42,8 +50,9 @@ import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste
     PagamentoComponent,
     JogoCrudComponent,
     JogoCreateComponent,
+    CarrouselTesteComponent,
+      JogoReadComponent,
 
-    CarrouselTesteComponent
 
   ],
   imports: [
@@ -67,7 +76,10 @@ import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste
     FontAwesomeModule,
     NgbModule
   ],
-  providers: [],
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: 'pt-BR'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
