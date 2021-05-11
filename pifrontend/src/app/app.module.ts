@@ -26,15 +26,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { PagamentoComponent } from './views/pagamento/pagamento.component';
 import { JogoCrudComponent } from './views/jogo-crud/jogo-crud.component';
 import { JogoCreateComponent } from './components/jogo/jogo-create/jogo-create.component';
-import { MatSelectModule } from '@angular/material/select'
+import { MatSelectModule } from '@angular/material/select';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
 import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
 import { BarrapesquisaComponent } from './components/template/barrapesquisa/barrapesquisa.component';
 import { CardSliderComponent } from './views/home/components/card-slider/card-slider.component';
-import {MatIconModule} from '@angular/material/icon';
-
+import { MatIconModule } from '@angular/material/icon';
+import { FeaturedGameComponent } from './views/home/components/featured-game/featured-game.component';
 
 @NgModule({
   declarations: [
@@ -47,12 +47,12 @@ import {MatIconModule} from '@angular/material/icon';
     JogoCrudComponent,
     JogoCreateComponent,
     CarrouselTesteComponent,
-      CarouselCardsComponent,
-      BarrapesquisaComponent,
-      
     CarouselCardsComponent,
-    CardSliderComponent
+    BarrapesquisaComponent,
 
+    CarouselCardsComponent,
+    CardSliderComponent,
+    FeaturedGameComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,9 +75,9 @@ import {MatIconModule} from '@angular/material/icon';
     FontAwesomeModule,
     NgbModule,
     NgbModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
