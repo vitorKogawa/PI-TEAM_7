@@ -1,0 +1,32 @@
+.card-slider-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid red;
+    margin: 20px 0px;
+    width: 100%;
+    overflow: scroll;
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+
+.card-slider-wrapper>.card-slider-content-item {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.card-slider-item {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0px 10px;
+}

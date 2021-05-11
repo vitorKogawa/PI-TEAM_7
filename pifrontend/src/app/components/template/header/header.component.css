@@ -1,14 +1,15 @@
 a {
-    cursor: pointer;
-    text-decoration: none;
-    color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  color:#fff;
 }
 
 .header {
-    height: auto;
-    background-color: #212121;
-    display: flex;
-    justify-content: space-between;
+  height: auto;
+  background-color: #212121;
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .header .logo {

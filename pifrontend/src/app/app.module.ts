@@ -30,6 +30,9 @@ import { MatSelectModule } from '@angular/material/select'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
+import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
+import { CardSliderComponent } from './views/home/components/card-slider/card-slider.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -42,8 +45,9 @@ import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste
     PagamentoComponent,
     JogoCrudComponent,
     JogoCreateComponent,
-
-    CarrouselTesteComponent
+    CarrouselTesteComponent,
+    CarouselCardsComponent,
+    CardSliderComponent
 
   ],
   imports: [
@@ -65,7 +69,8 @@ import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste
     MatSortModule,
     MatSelectModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

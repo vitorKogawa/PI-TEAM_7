@@ -1,0 +1,26 @@
+<section class="card-slider-wrapper">
+    <button mat-fab color="primary">
+      <mat-icon>arrow_back_ios</mat-icon>
+    </button>
+    <div class="card-slider-content-item">
+        <mat-card class="card-slider-item" *ngFor="let game of games">
+            <mat-card-header>
+                <mat-card-title>{{ game.title }}</mat-card-title>
+                <mat-card-subtitle>{{ game.subtitle }}</mat-card-subtitle>
+            </mat-card-header>
+            <img src="{{game.imageUrl}}" alt="Jogo">
+            <mat-card-content>
+                Text content
+            </mat-card-content>
+            <mat-card-actions align="start">
+                <button mat-raised-button color="primary">Botão 1</button>
+            </mat-card-actions>
+            <mat-card-footer>
+                Footer
+            </mat-card-footer>
+        </mat-card>
+    </div>
+    <button mat-fab color="primary">
+      <mat-icon>arrow_forward_ios</mat-icon>
+    </button>
+</section>
