@@ -30,6 +30,7 @@ import { MatSelectModule } from '@angular/material/select'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
+import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste
     JogoCrudComponent,
     JogoCreateComponent,
 
-    CarrouselTesteComponent
+    CarrouselTesteComponent,
+      CarouselCardsComponent
 
   ],
   imports: [

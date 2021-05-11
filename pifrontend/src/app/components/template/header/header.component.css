@@ -1,13 +1,7 @@
 a {
-<<<<<<< HEAD
   cursor: pointer;
   text-decoration: none;
-  color: #fff;
-=======
-    cursor: pointer;
-    text-decoration: none;
-    color:#fff;
->>>>>>> 364474225c1ae6d283e78252842d414b7841c882
+  color:#fff;
 }
 
 .header {
@@ -15,6 +9,7 @@ a {
   background-color: #212121;
   display: flex;
   justify-content: space-between;
+
 }
 
 .header .logo {

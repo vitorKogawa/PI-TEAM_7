@@ -1,23 +1,38 @@
-<<<<<<< HEAD
+.home-page {
+    background-color: #C4C4C4;
 
-=======
+}
+
+.container-principal {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    /* align-content: center;
+    justify-content: center; */
+    padding: 10px;
+    min-height: 100vh;
+ 
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-img{
+    width: 700px;
+}
+
 .generos {
-    display: flex;
-}
-
-.home {
-    margin:30px;
-    width: 200px;
-    height: 200px;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    
-}
-
-.carrossel {
     border: 1px solid red;
+    background-color: #DDDDDD;
+    width: 200px;
+    height: 500px;
+    margin-right: 15px;
 }
->>>>>>> 364474225c1ae6d283e78252842d414b7841c882
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
