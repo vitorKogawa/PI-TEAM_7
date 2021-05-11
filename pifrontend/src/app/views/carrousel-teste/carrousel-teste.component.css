@@ -1,0 +1,16 @@
+/* img {
+    width: 100vh;
+    height: 300px;
+} */
+
+.carrousel {
+    background-color: #DDDDDD;
+    width: 1050px;
+    height: 300px;
+}
+
+.picsum-img-wrapper img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}

@@ -1,7 +1,7 @@
 a {
   cursor: pointer;
   text-decoration: none;
-  color: #fff;
+  color:#fff;
 }
 
 .header {
@@ -9,6 +9,7 @@ a {
   background-color: #212121;
   display: flex;
   justify-content: space-between;
+
 }
 
 .header .logo {
