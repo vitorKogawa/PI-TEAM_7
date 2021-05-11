@@ -31,6 +31,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
 import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
+import { BarrapesquisaComponent } from './components/template/barrapesquisa/barrapesquisa.component';
 import { CardSliderComponent } from './views/home/components/card-slider/card-slider.component';
 import {MatIconModule} from '@angular/material/icon';
 
@@ -46,6 +47,9 @@ import {MatIconModule} from '@angular/material/icon';
     JogoCrudComponent,
     JogoCreateComponent,
     CarrouselTesteComponent,
+      CarouselCardsComponent,
+      BarrapesquisaComponent,
+      
     CarouselCardsComponent,
     CardSliderComponent
 
@@ -69,6 +73,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatSortModule,
     MatSelectModule,
     FontAwesomeModule,
+    NgbModule,
     NgbModule,
     MatIconModule
   ],
