@@ -1,7 +1,11 @@
-<mat-card>
-    <mat-card-title class="login">Login  
-    </mat-card-title>
+<div class="container">
+<mat-card>  
     <form>
+        <a routerLink="/home" class="logo">
+            <img src="../../../../assets/img/AVAGAMES-logo.png" alt="Logo da Avagames">
+        </a>
+        <mat-card-title>Login  
+        </mat-card-title>
         <mat-form-field>
             <input matInput placeholder="Usuario" >
         </mat-form-field>
@@ -9,7 +13,9 @@
             <input matInput placeholder="Senha" >
         </mat-form-field>
     </form>
-    <button mat-button>
+        <a class="aLink" routerLink="">Recuperar senha?</a>
+    <button mat-raised-button (click)="navigateToHome()">
         Login
     </button>
 </mat-card>
+</div>

@@ -1,19 +1,66 @@
-.generos {
-    display: flex;
+.home-page {
+    background-color: #C4C4C4;
+
 }
 
-.home {
-    margin:30px;
-    width: 200px;
-    height: 200px;
-}
-
-.container {
+.container-principal {
+    border: 1px solid blue;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     
+    padding: 10px;
+    min-height: 100vh;
+ 
 }
 
-.carrossel {
-    border: 1px solid red;
+.carousel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
+.carousel-img{
+    width: 700px;
+}
+
+.card-generos {
+    background-color: #DDDDDD;
+    width: 200px;
+    height: 500px;
+    margin-right: 15px;
+    text-align: justify;
+}
+
+.titulo h4 {
+    background-color: #212121;
+    color: #DDDDDD;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+li {
+    text-align: initial;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 15px;
+}
+
+a {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-size: 20px;
+    padding: 10px;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #212121;
+    color: #DDDDDD;
+}
+

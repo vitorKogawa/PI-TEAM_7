@@ -1,26 +1,27 @@
-<div class="container">
-    <mat-card class="home mat-elevation-z3">
-        <mat-card-title class="generos">
-           Gêneros
-        </mat-card-title>
-        <mat-card-subtitle class="">
-            <ul>
-                <li>Ação</li>
-                <li>Aventura</li>
-                <li></li>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>  
-            </ul>
-        </mat-card-subtitle>
-    </mat-card>
-    
-    <div class="carrossel"> 
-        <app-carrousel-teste></app-carrousel-teste>
-    </div>
-    <div>
-        carrossel dois com botão
+<div class="home-page">
+
+<div class="container-principal">
+    <div class="card-generos">
+        <div class="titulo">
+            <h4>MENU</h4>
+            <a href="">Início</a> 
+            <a href="">Meu perfil</a> 
+            <a href="">Meus jogos</a>
+            <a href="">Vistos recentemente</a>
+            <a href="">Favoritos</a>
+            <a href="" *ngIf="status_adm">Usuários cadastrados</a>
+            <a href="" *ngIf="status_adm">Jogos cadastrados</a>
+            <a href="" *ngIf="status_adm">Pagamentos</a>        
+        </div>
     </div>
     
+    <div class="carousel">
+        <div class="carousel-img"><app-carrousel-teste ></app-carrousel-teste></div>
+        <app-barrapesquisa></app-barrapesquisa>
+        <div>carousel2</div>
     </div>
+
+</div>
+
+</div>
+

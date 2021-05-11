@@ -39,6 +39,10 @@ import  localePt  from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common'
 registerLocaleData (localePt);
 
+import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
+import { BarrapesquisaComponent } from './components/template/barrapesquisa/barrapesquisa.component';
+
+
 
 @NgModule({
   declarations: [
@@ -51,7 +55,10 @@ registerLocaleData (localePt);
     JogoCrudComponent,
     JogoCreateComponent,
     CarrouselTesteComponent,
-      JogoReadComponent,
+    JogoReadComponent,
+    CarrouselTesteComponent,
+    CarouselCardsComponent,
+    BarrapesquisaComponent,
 
 
   ],
@@ -74,7 +81,7 @@ registerLocaleData (localePt);
     MatSortModule,
     MatSelectModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [{
     provide: LOCALE_ID,
