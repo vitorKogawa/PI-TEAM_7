@@ -4,18 +4,27 @@
         <a routerLink="/home" class="logo">
             <img src="../../../../assets/img/AVAGAMES-logo.png" alt="Logo da Avagames">
         </a>
-        <mat-card-title>Login  
+        <mat-card-title>Login 
         </mat-card-title>
         <mat-form-field>
-            <input matInput placeholder="Usuario" >
+            <input matInput placeholder="Usuario:" >
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Senha" >
+            <input matInput placeholder="Senha:" >
         </mat-form-field>
     </form>
-        <a class="aLink" routerLink="">Recuperar senha?</a>
     <button mat-raised-button (click)="navigateToHome()">
         Login
     </button>
+    <!-- <div class="cadastrar">
+        <p>Ainda não tem conta?</p>
+        <a class="cadastre" routerLink="">Cadastre-se</a>
+    </div> -->
+    <nav>
+        <ul>
+            <li><p >Ainda não tem conta?</p></li>
+            <li><a routerLink="" >Cadastre-se</a></li>
+        </ul>
+    </nav>
 </mat-card>
 </div>
