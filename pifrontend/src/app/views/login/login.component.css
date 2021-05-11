@@ -1,29 +1,48 @@
 mat-card {
   background-color: #9f9f9f;
   width: 30%;
-  height: 770px;
+  height: 800px;
+}
+
+mat-form-field {
+  font-size: 14px;
 }
 
 .container {
   background-image: url('/assets/img/mario.png');
   background-position: center;
+  max-width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-
+  margin: 0;
+  padding: 0px;
 }
 
-
-.login {
-  color: black;
+mat-card-title {
+  display: flex;
+  justify-content: center;
+  color: white;
   font-size: 3vw;
   text-align: center;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
 
+.logo img {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 160px;
+}
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .aLink {
   color: white;
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
   text-decoration: none;
   margin-bottom: 10px;
@@ -33,12 +52,29 @@ mat-card {
 form {
   display: flex;
   flex-direction: column;
-
 }
 
 button {
+  display: flex;
+  justify-content: center;
   width: 100%;
   color: white;
-  margin-top: 10px;
-  background-color: turquoise;
+  margin-top: 40px;
+  background-color: #f28705;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: white !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: white !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: #f28705 !important;
+  ;
 }
