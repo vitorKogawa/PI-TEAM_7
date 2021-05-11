@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { JogoService } from 'src/app/service/jogo/jogo.service';
+import { IJogo } from 'src/app/models/IJogo';
 
 @Component({
   selector: 'app-card-slider',
@@ -6,43 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-slider.component.css']
 })
 export class CardSliderComponent implements OnInit {
+  constructor(private jogoService: JogoService) { }
 
-  constructor() { }
-
-  games: Array<{ title: string, subtitle: string, imageUrl: string }> = [
-    {
-      title: 'Game 1',
-      subtitle: 'Subtitle game 1',
-      imageUrl: 'https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png'
-    },
-    {
-      title: 'Game 1',
-      subtitle: 'Subtitle game 1',
-      imageUrl: 'https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png'
-    },
-    {
-      title: 'Game 1',
-      subtitle: 'Subtitle game 1',
-      imageUrl: 'https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png'
-    },
-    {
-      title: 'Game 1',
-      subtitle: 'Subtitle game 1',
-      imageUrl: 'https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png'
-    },
-    {
-      title: 'Game 1',
-      subtitle: 'Subtitle game 1',
-      imageUrl: 'https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png'
-    },
-    {
-      title: 'Game 1',
-      subtitle: 'Subtitle game 1',
-      imageUrl: 'https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png'
-    }
-  ]
+  jogos: Array<IJogo> = [];
 
   ngOnInit(): void {
+    this.getAll();
   }
 
+  getAll(): void{
+    this.jogoService.findAll().subscribe(jogos => {
+      console.log(jogos);
+      this.jogos = jogos;
+    });
+  }
 }

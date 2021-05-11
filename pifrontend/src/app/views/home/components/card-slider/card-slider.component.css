@@ -28,6 +28,7 @@ button {
 mat-card-header {
     /* background-color: blue; */
     display: flex;
+    min-height: 70px;
 }
 
 mat-card-content {
