@@ -31,21 +31,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
 import { JogoReadComponent } from './components/jogo/jogo-read/jogo-read.component';
-
-
-
-//para a moeda BR//
-import  localePt  from '@angular/common/locales/pt'
-import { registerLocaleData } from '@angular/common'
-registerLocaleData (localePt);
-
 import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
 import { BarrapesquisaComponent } from './components/template/barrapesquisa/barrapesquisa.component';
 import { CardSliderComponent } from './views/home/components/card-slider/card-slider.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FeaturedGameComponent } from './views/home/components/featured-game/featured-game.component';
 
-
+//para a moeda BR//
+import  localePt  from '@angular/common/locales/pt'
+import { registerLocaleData } from '@angular/common'
+registerLocaleData (localePt);
 
 @NgModule({
   declarations: [
@@ -87,6 +82,8 @@ import { FeaturedGameComponent } from './views/home/components/featured-game/fea
     NgbModule,
     NgbModule,
     MatIconModule,
+    CardSliderComponent,
+    FeaturedGameComponent
   ],
   providers: [{
     provide: LOCALE_ID,
