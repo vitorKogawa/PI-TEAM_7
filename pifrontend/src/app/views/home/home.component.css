@@ -7,14 +7,14 @@
     border: 1px solid blue;
     display: flex;
     flex-direction: row;
-    /* align-content: center;
-    justify-content: center; */
+    
     padding: 10px;
     min-height: 100vh;
  
 }
 
 .carousel {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -23,16 +23,25 @@
     width: 700px;
 }
 
-.generos {
-    border: 1px solid red;
+.card-generos {
     background-color: #DDDDDD;
     width: 200px;
     height: 500px;
     margin-right: 15px;
+    text-align: justify;
+}
+
+.titulo h4 {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 li {
+    text-align: initial;
     text-decoration: none;
     list-style-type: none;
+    font-size: 15px;
 }
 
