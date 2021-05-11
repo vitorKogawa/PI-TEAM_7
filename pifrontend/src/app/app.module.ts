@@ -24,11 +24,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { PagamentoComponent } from './views/pagamento/pagamento.component';
-import { MatSelectModule } from '@angular/material/select';
+import { JogoCrudComponent } from './views/jogo-crud/jogo-crud.component';
+import { JogoCreateComponent } from './components/jogo/jogo-create/jogo-create.component';
+import { MatSelectModule } from '@angular/material/select'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -39,7 +40,11 @@ import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste
     HomeComponent,
     LoginComponent,
     PagamentoComponent,
+    JogoCrudComponent,
+    JogoCreateComponent,
+
     CarrouselTesteComponent
+
   ],
   imports: [
     BrowserModule,

@@ -13,4 +13,6 @@ export class HeaderComponent implements OnInit {
   }
   status_adm: boolean = false;
 
+  status_adm = "true"
+
 }

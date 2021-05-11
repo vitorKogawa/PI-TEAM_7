@@ -1,9 +1,9 @@
 <mat-toolbar class="header mat-elevation-z4">
-    <a routerLink="/home" class="logo">
+    <a routerLink="/" class="logo">
         <img src="../../../../assets/img/AVAGAMES-logo.png" alt="Logo da Avagames">
     </a>
     <div class="nav-item-container">
-        <a routerLink="/home">Home</a>
-        <a>Cadastro de jogos</a>
+        <a routerLink="/">HOME</a>
+        <a routerLink="/jogos" *ngIf="status_adm" RouterLink="jogos">CADASTRAR</a>
     </div>
 </mat-toolbar>
