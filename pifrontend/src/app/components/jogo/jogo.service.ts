@@ -8,7 +8,7 @@ import { Jogo } from './jogo.model';
   providedIn: 'root'
 })
 export class JogoService {
-  baseUrl = 'http://localhost:3000/jogos'
+  baseUrl = 'http://localhost:3333/jogo'
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }
