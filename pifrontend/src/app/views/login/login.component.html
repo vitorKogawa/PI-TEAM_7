@@ -1,30 +1,28 @@
 <div class="container">
-<mat-card>  
-    <form [formGroup]="form" (submit)="submit()">
-        <a routerLink="/home" class="logo">
-            <img src="../../../../assets/img/AVAGAMES-logo.png" alt="Logo da Avagames">
-        </a>
-        <mat-card-title>Login 
-        </mat-card-title>
-        <mat-form-field>
-            <input matInput placeholder="E-mail:" forControlName="email" [(ngModel)]="email">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Senha:" forControlName="senha" [(ngModel)]="senha">
-        </mat-form-field>
-    </form>
-    <button mat-raised-button  type="submit">
+    <mat-card>
+        <form>
+            <a routerLink="/home" class="logo">
+                <img src="../../../../assets/img/AVAGAMES-logo.png" alt="Logo da Avagames">
+            </a>
+            <mat-card-title>Login
+            </mat-card-title>
+            <mat-form-field>
+                <input matInput placeholder="E-mail:" [(ngModel)]="credentials.email" name="email">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Senha:" [(ngModel)]="credentials.senha" name="senha">
+            </mat-form-field>
+        </form>
+        <button mat-raised-button type="submit" (click)="login()">
         Login
     </button>
-    <!-- <div class="cadastrar">
-        <p>Ainda não tem conta?</p>
-        <a class="cadastre" routerLink="">Cadastre-se</a>
-    </div> -->
-    <nav>
-        <ul>
-            <li><p >Ainda não tem conta?</p></li>
-            <li><a routerLink="" >Cadastre-se</a></li>
-        </ul>
-    </nav>
-</mat-card>
+        <nav>
+            <ul>
+                <li>
+                    <p>Ainda não tem conta?</p>
+                </li>
+                <li><a routerLink="">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </mat-card>
 </div>
