@@ -10,8 +10,6 @@ export class HomeComponent implements OnInit {
   constructor() {
   }
 
-  numeros: number[] = [1,2,4,5]
-
   ngOnInit(): void {
   }
 

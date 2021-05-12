@@ -28,6 +28,7 @@ button {
 mat-card-header {
     /* background-color: blue; */
     display: flex;
+    min-height: 70px;
 }
 
 mat-card-content {
@@ -47,6 +48,7 @@ mat-card-content:hover {
 .text-align-center {
     text-align: center;
     /* background-color: red; */
+<<<<<<< HEAD
 }
 
 button {
@@ -59,3 +61,6 @@ button:hover {
     cursor: pointer;
 
 }
+=======
+}
+>>>>>>> a057a9c0b7c542dfb0ba516d8516931e63377581
