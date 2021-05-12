@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
-  numeros: number[] = [1,2,4,5]
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  status_adm: boolean = false;
 }

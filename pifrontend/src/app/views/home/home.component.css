@@ -1,27 +1,33 @@
-.home-page {
-    background-color: #C4C4C4;
+/* .home-page {
 
-}
+} */
 
 .container-principal {
     border: 1px solid blue;
     display: flex;
     flex-direction: row;
-    
     padding: 10px;
     min-height: 100vh;
- 
+    background-color: #C4C4C4;
 }
+
+
+/* CONTEÚDO DA PÁGINA */
 
 .carousel {
     width: 100%;
     display: flex;
     flex-direction: column;
+    border: 2px solid black;
 }
 
-.carousel-img{
-    width: 700px;
+.carousel-img {
+    width: 100%;
+    border: 2px solid purple;
 }
+
+
+/* MENU LATERAL */
 
 .card-generos {
     background-color: #DDDDDD;
@@ -32,10 +38,13 @@
 }
 
 .titulo h4 {
-    padding-top: 15px;
+    background-color: #212121;
+    color: #DDDDDD;
+    padding: 10px;
     text-align: center;
     font-size: 25px;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 li {
@@ -45,3 +54,17 @@ li {
     font-size: 15px;
 }
 
+a {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #212121;
+    color: #DDDDDD;
+}

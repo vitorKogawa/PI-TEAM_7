@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,11 +26,22 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { PagamentoComponent } from './views/pagamento/pagamento.component';
 import { JogoCrudComponent } from './views/jogo-crud/jogo-crud.component';
 import { JogoCreateComponent } from './components/jogo/jogo-create/jogo-create.component';
-import { MatSelectModule } from '@angular/material/select'
+import { MatSelectModule } from '@angular/material/select';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
+import { JogoReadComponent } from './components/jogo/jogo-read/jogo-read.component';
+
 import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
+import { BarrapesquisaComponent } from './components/template/barrapesquisa/barrapesquisa.component';
+import { CardSliderComponent } from './views/home/components/card-slider/card-slider.component';
+import { MatIconModule } from '@angular/material/icon';
+import { FeaturedGameComponent } from './views/home/components/featured-game/featured-game.component';
+import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-usuario.component';
+//para a moeda BR//
+import  localePt  from '@angular/common/locales/pt'
+import { registerLocaleData } from '@angular/common'
+registerLocaleData (localePt);
 
 @NgModule({
   declarations: [
@@ -43,7 +54,13 @@ import { CarouselCardsComponent } from './components/template/carousel-cards/car
     JogoCrudComponent,
     JogoCreateComponent,
     CarrouselTesteComponent,
+    JogoReadComponent,
+    CarrouselTesteComponent,
     CarouselCardsComponent,
+    BarrapesquisaComponent,
+    CadastrarUsuarioComponent,
+    CardSliderComponent,
+    FeaturedGameComponent
   ],
   imports: [
     BrowserModule,
@@ -64,10 +81,15 @@ import { CarouselCardsComponent } from './components/template/carousel-cards/car
     MatSortModule,
     MatSelectModule,
     FontAwesomeModule,
-    NgbModule,
     ReactiveFormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt-BR',
+    },
+  ],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

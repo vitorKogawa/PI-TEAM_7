@@ -13,6 +13,7 @@ export class JogoCreateComponent implements OnInit {
 
 
   jogo: Jogo = {
+    id: NaN,
     nome: '',
     preco: NaN,
     quantidade: NaN,

@@ -1,29 +1,24 @@
-<div class="home-page">
-
 <div class="container-principal">
-
     <div class="card-generos">
-
         <div class="titulo">
-            <h4>CATEGORIAS</h4> 
-        </div>
-        <div class="categorias">
-            <ul>
-                <li><a href="">genero</a></li>
-                <li><a href="">genero</a></li>
-                <li><a href="">genero</a></li>
-                <li><a href="">genero</a></li>
-                <li><a href="">genero</a></li>
-            </ul>
+            <h4>MENU</h4>
+            <a href="">Início</a>
+            <a href="">Meu perfil</a>
+            <a href="">Meus jogos</a>
+            <a href="">Vistos recentemente</a>
+            <a href="">Favoritos</a>
+            <a href="" *ngIf="status_adm">Usuários cadastrados</a>
+            <a href="" *ngIf="status_adm">Jogos cadastrados</a>
+            <a href="" *ngIf="status_adm">Pagamentos</a>
         </div>
     </div>
 
     <div class="carousel">
-        <div class="carousel-img"><app-carrousel-teste ></app-carrousel-teste></div>
-        <div>carousel2</div>
+        <div class="carousel-img">
+            <app-carrousel-teste></app-carrousel-teste>
+        </div>
+        <app-barrapesquisa></app-barrapesquisa>
+        <app-card-slider></app-card-slider>
+        <app-featured-game></app-featured-game>
     </div>
-
 </div>
-
-</div>
-

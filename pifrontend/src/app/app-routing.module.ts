@@ -6,6 +6,7 @@ import { HomeComponent } from './views/home/home.component';
 import { PagamentoComponent } from "./views/pagamento/pagamento.component"
 import { JogoCrudComponent } from "./views/jogo-crud/jogo-crud.component"
 import { JogoCreateComponent } from './components/jogo/jogo-create/jogo-create.component';
+import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-usuario.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,7 @@ const routes: Routes = [
     component: PagamentoComponent
   },
   {
-    path: '',
+    path: 'home',
     component: HomeComponent
   },
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'carousel',
     component: CarrouselTesteComponent
+  },
+  {
+    path: 'cadastroUsuario',
+    component: CadastrarUsuarioComponent
   }
 ];
 
