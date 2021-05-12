@@ -17,7 +17,7 @@ export class JogoService {
     this.snackBar.open(msg,'X',{
       duration:3000,
       horizontalPosition:'right',
-      verticalPosition:'top' 
+      verticalPosition:'top'
     })
   }
   //conexao com o backend
@@ -25,7 +25,7 @@ export class JogoService {
   create(jogo: Jogo):Observable<Jogo> {
     return this.http.post<Jogo>(this.baseUrl, jogo)
   }
-  
+
   //filtrando o jogo
   read(): Observable<Jogo[]>{
     return this.http.get<Jogo[]>(this.baseUrl)
