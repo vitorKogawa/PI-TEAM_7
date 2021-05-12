@@ -9,8 +9,12 @@ class Jogo extends Model {
             espaco_arm: Sequelize.DOUBLE,
             genero: Sequelize.STRING,
             status: Sequelize.BOOLEAN,
-            imageUrl: Sequelize.STRING
+            imageUrl: Sequelize.STRING,
         }, { sequelize, tableName: "tb_jogo" });
+    }
+
+    static associate(models) {
+        Jogo.hasMany(models.Pagamento);
     }
 }
 

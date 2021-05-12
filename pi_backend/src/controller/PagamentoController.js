@@ -1,27 +1,12 @@
 import Pagamento from "../models/tb_pagamento";
-import { Op } from "sequelize";
-
 class PagamentoController {
     async create(request, response) {
-        if (!request.body.data_pagamento) {
-            return response
-                .status(500)
-                .json({ message: "A data não pode estar vazia" });
-        }
-
-        const {
-            data_pagamento,
-            hora_pagamento,
-            cod_tipo_pagamento,
-            cod_usuario,
-            cod_jogo,
-        } = request.body;
+        const { status, cod_usuario, cod_jogo, cod_tipo_pagamento } = request.body;
         const newPagamento = {
-            data_pagamento,
-            hora_pagamento,
-            cod_tipo_pagamento,
+            status: status ? status : false,
             cod_usuario,
             cod_jogo,
+            cod_tipo_pagamento,
         };
 
         await Pagamento.create(newPagamento)
