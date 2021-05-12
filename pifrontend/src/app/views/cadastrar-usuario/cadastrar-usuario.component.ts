@@ -23,19 +23,32 @@ export class CadastrarUsuarioComponent implements OnInit {
     }
 
     saveCadastroUsuario(): void {
-      const data = {
-        nome: this.cadastroUsuario.nome,
-        email: this.cadastroUsuario.email,
-        senha: this.cadastroUsuario.senha,
-        usuario: this.cadastroUsuario.usuario,
-        cpf: this.cadastroUsuario.cpf
-      }
 
-      this.cadastroUsuarioService.create(data).subscribe(
-        (error : any) => {
-          console.log(error);
+      this.senhasIguais = this.ValidarSenha();
+      console.log(this.senhasIguais)
+
+      if(this.senhasIguais){
+        const data = {
+          nome: this.cadastroUsuario.nome,
+          email: this.cadastroUsuario.email,
+          senha: this.cadastroUsuario.senha,
+          usuario: this.cadastroUsuario.usuario,
+          cpf: this.cadastroUsuario.cpf
         }
-      )
+
+        this.cadastroUsuarioService.create(data).subscribe(
+          () => {
+            window.location.href = '/login';
+          },
+          (error : any) => {
+            console.log(error);
+          }
+        )
+      }
+    }
+
+    ValidarSenha(): boolean {
+      return this.cadastroUsuario.senha === this.cadastroUsuario.confirmarSenha? true : false
     }
 
 }

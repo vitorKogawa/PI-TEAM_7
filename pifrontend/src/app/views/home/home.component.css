@@ -40,6 +40,7 @@
 .titulo h4 {
     background-color: #212121;
     color: #DDDDDD;
+    border-radius: 5px;
     padding: 10px;
     text-align: center;
     font-size: 25px;
@@ -62,9 +63,17 @@ a {
     padding: 10px;
     text-align: center;
     text-decoration: none;
+    transition: .4s ease-in-out;
 }
 
 a:hover {
-    background-color: #212121;
+    background-color: #9d5d10 ;
+    border-radius: 5px;
     color: #DDDDDD;
+    
 }
+
+.pesquisar {
+    padding: 10px;
+}
+
