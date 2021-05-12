@@ -1,0 +1,104 @@
+.cadastroUsuario {
+    display: flex;
+    height: 80%;
+}
+
+.cadastroUsuario .formCadastro {
+    width: 40%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: #808080;
+}
+
+.cadastroUsuario .formCadastro h2 {
+    font-size: 25px;
+    margin: 10px 0 20px;
+    text-align-last: center;
+    color: white;
+}
+
+.cadastroUsuario .formCadastro form {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+}
+
+.cadastroUsuario .formCadastro input::placeholder {
+    color: white;
+}
+
+.cadastroUsuario .formCadastro input {
+    height: 30px;
+    width: 80%;
+    margin: 0 auto 20px;
+    background-color: gray;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    padding: 0;
+}
+
+.cadastroUsuario .formCadastro button {
+    height: 40px;
+    border-radius: 3px;
+    border-color: orange;
+    width: 50%;
+    margin: 0 auto 20px;
+    background-color: #ffa500;
+    color: white;
+    
+    
+}
+
+.cadastroUsuario .formCadastro p {
+    margin: 0 auto;
+    color: white;
+}
+
+#ImgCadastro {
+    width: 100%;
+    position: relative;
+}
+
+#ImgCadastro #item-1 {
+    flex-direction: column;
+    background-image: url(https://wallpaperaccess.com/full/3417374.jpg);
+    background-repeat: no-repeat;
+    background-size: 1000px 600px;
+    background-position: center; 
+    background-color: black;
+}
+
+#ImgCadastro #item-1 p {
+    font-size: 20px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+}
+
+#ImgCadastro .item {   
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 80vh;
+}
+
+
+@media (max-width: 1000px) {
+    .cadastroUsuario .formCadastro {
+        width: 60%;
+    }
+}
+
+@media (max-width: 750px) {
+    #ImgCadastro {
+        visibility: hidden;
+        width: 0;
+    }
+
+    .cadastroUsuario .formCadastro {
+        width: 100%;
+    }
+}

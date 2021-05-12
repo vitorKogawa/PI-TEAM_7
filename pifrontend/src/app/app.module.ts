@@ -16,7 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
@@ -37,6 +37,7 @@ import { BarrapesquisaComponent } from './components/template/barrapesquisa/barr
 import { CardSliderComponent } from './views/home/components/card-slider/card-slider.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FeaturedGameComponent } from './views/home/components/featured-game/featured-game.component';
+import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-usuario.component';
 //para a moeda BR//
 import  localePt  from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common'
@@ -57,6 +58,7 @@ registerLocaleData (localePt);
     CarrouselTesteComponent,
     CarouselCardsComponent,
     BarrapesquisaComponent,
+    CadastrarUsuarioComponent,
     CardSliderComponent,
     FeaturedGameComponent
   ],
@@ -79,9 +81,7 @@ registerLocaleData (localePt);
     MatSortModule,
     MatSelectModule,
     FontAwesomeModule,
-    NgbModule,
-    NgbModule,
-    MatIconModule,
+    ReactiveFormsModule
   ],
   providers: [
     {
@@ -92,4 +92,4 @@ registerLocaleData (localePt);
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {}
+export class AppModule { }
