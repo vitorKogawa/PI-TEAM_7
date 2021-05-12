@@ -48,3 +48,14 @@ mat-card-content:hover {
     text-align: center;
     /* background-color: red; */
 }
+
+button {
+    transition: .4s ease-in-out;
+
+}
+
+button:hover {
+    background-color: #9d5d10;
+    cursor: pointer;
+
+}

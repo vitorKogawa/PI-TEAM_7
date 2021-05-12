@@ -1,7 +1,14 @@
-<mat-card>
-    <img matCardImage src="">
+<!-- <mat-card class="container-card">
+    <img matCardImage src="./../../../../../assets/img/starwars.png" alt="">
     <mat-card-actions>
-        <mat-label></mat-label>
-        <button mat-stroked-button color="primary">Preço(R$)</button>
+        <button mat-stroked-button color="#0000">Preço(R$)</button>
     </mat-card-actions>
-</mat-card>
+</mat-card> -->
+
+<div class="container-card">
+        <img [src]="imageUrl" alt="">
+    <div class="botao">
+        <h4>{{ game.nome }}</h4>
+        <button mat-stroked-button>R$ {{ game.preco }},00</button>
+    </div>   
+</div>
