@@ -9,7 +9,6 @@ import { HomeComponent } from './views/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './views/login/login.component';
 
-//modules//
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
@@ -38,9 +37,9 @@ import { CardSliderComponent } from './views/home/components/card-slider/card-sl
 import { MatIconModule } from '@angular/material/icon';
 import { FeaturedGameComponent } from './views/home/components/featured-game/featured-game.component';
 import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-usuario.component';
-//para a moeda BR//
-import  localePt  from '@angular/common/locales/pt'
-import { registerLocaleData } from '@angular/common'
+
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
 registerLocaleData (localePt);
 
 @NgModule({
@@ -55,7 +54,6 @@ registerLocaleData (localePt);
     JogoCreateComponent,
     CarrouselTesteComponent,
     JogoReadComponent,
-    CarrouselTesteComponent,
     CarouselCardsComponent,
     BarrapesquisaComponent,
     CadastrarUsuarioComponent,
@@ -81,7 +79,9 @@ registerLocaleData (localePt);
     MatSortModule,
     MatSelectModule,
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule,
+    NgbModule
   ],
   providers: [
     {

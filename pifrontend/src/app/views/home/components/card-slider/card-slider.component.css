@@ -52,12 +52,10 @@ mat-card-content:hover {
 
 button {
     transition: .4s ease-in-out;
-
 }
 
 button:hover {
     background-color: #9d5d10;
     cursor: pointer;
-
 }
 
