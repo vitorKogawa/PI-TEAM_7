@@ -4,16 +4,16 @@
 
         <form action="">
             <input [(ngModel)]="cadastroUsuario.nome" name="nome" type="text" placeholder="Nome">
-            
+
             <input [(ngModel)]="cadastroUsuario.cpf" name="cpf" type="text" placeholder="CPF">
 
             <input [(ngModel)]="cadastroUsuario.usuario" name="usuario" type="text" placeholder="Username">
-            
+
             <input [(ngModel)]="cadastroUsuario.email" name="email" type="email" placeholder="E-mail">
-            
+
             <input [(ngModel)]="cadastroUsuario.senha" name="senha" type="password" placeholder="Password">
 
-            <input [(ngModel)]="cadastroUsuario.confirmarSenha" name="confrimarSenha" type="password" placeholder="Confirm your Password">
+            <input [(ngModel)]="confirmarSenha" name="confrimarSenha" type="password" placeholder="Confirm your Password">
 
             <p id="avisoCadastro" *ngIf="!senhasIguais">Confirmar senha Precisa ser igual senha</p>
 

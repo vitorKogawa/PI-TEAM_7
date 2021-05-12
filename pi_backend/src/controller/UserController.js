@@ -19,7 +19,8 @@ class UserController {
         } else {
             const userExists = await User.findOne({
                     where: {
-                        [Op.or]: [{ email }, { cpf }] },
+                        [Op.or]: [{ email }, { cpf }]
+                    },
                 })
                 .then((data) => (data ? true : false))
                 .catch((error) => {
