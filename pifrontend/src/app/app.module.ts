@@ -16,7 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
@@ -32,7 +32,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
 import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,10 +42,8 @@ import { CarouselCardsComponent } from './components/template/carousel-cards/car
     PagamentoComponent,
     JogoCrudComponent,
     JogoCreateComponent,
-
     CarrouselTesteComponent,
-      CarouselCardsComponent
-
+    CarouselCardsComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,9 +64,10 @@ import { CarouselCardsComponent } from './components/template/carousel-cards/car
     MatSortModule,
     MatSelectModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

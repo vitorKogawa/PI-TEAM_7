@@ -1,19 +1,19 @@
 <div class="container">
 <mat-card>  
-    <form>
+    <form [formGroup]="form" (submit)="submit()">
         <a routerLink="/home" class="logo">
             <img src="../../../../assets/img/AVAGAMES-logo.png" alt="Logo da Avagames">
         </a>
         <mat-card-title>Login 
         </mat-card-title>
         <mat-form-field>
-            <input matInput placeholder="Usuario:" >
+            <input matInput placeholder="E-mail:" forControlName="email" [(ngModel)]="email">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Senha:" >
+            <input matInput placeholder="Senha:" forControlName="senha" [(ngModel)]="senha">
         </mat-form-field>
     </form>
-    <button mat-raised-button (click)="navigateToHome()">
+    <button mat-raised-button  type="submit">
         Login
     </button>
     <!-- <div class="cadastrar">
