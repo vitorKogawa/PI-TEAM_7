@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CadastroUsuario } from '../../models/IUsuario';
+import { IUsuario } from '../../models/IUsuario';
 import { CadastroUsuarioService } from './cadastro-usuario.service'
 
 @Component({
@@ -11,14 +11,14 @@ export class CadastrarUsuarioComponent implements OnInit {
 
   constructor(private cadastroUsuarioService: CadastroUsuarioService) { }
 
-  cadastroUsuario: CadastroUsuario = {
+  cadastroUsuario: IUsuario = {
     nome: '',
     email: '',
     senha: '',
     usuario: '',
     cpf: ''
     }
-    
+
     ngOnInit(): void {
     }
 
