@@ -12,8 +12,8 @@ export class FeaturedGameComponent implements OnInit {
   game: IJogo = {
     nome: 'The Last Of Us II',
     preco: 200,
-    
   }
+  
   imageUrl: string = "https://evilhazard.com.br/wp-content/uploads/2020/02/tlouThe-last-of-us-part-II.jpg"
   
   constructor() { }
