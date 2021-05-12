@@ -41,6 +41,7 @@ registerLocaleData (localePt);
 
 import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
 import { BarrapesquisaComponent } from './components/template/barrapesquisa/barrapesquisa.component';
+import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-usuario.component';
 
 
 
@@ -59,6 +60,7 @@ import { BarrapesquisaComponent } from './components/template/barrapesquisa/barr
     CarrouselTesteComponent,
     CarouselCardsComponent,
     BarrapesquisaComponent,
+    CadastrarUsuarioComponent,
 
 
   ],
