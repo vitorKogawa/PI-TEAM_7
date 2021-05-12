@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JogoService } from 'src/app/service/jogo/jogo.service';
+import { JogoService } from 'src/app/components/jogo/jogo.service';
 import { IJogo } from 'src/app/models/IJogo';
 
 @Component({
@@ -17,7 +17,7 @@ export class CardSliderComponent implements OnInit {
   }
 
   getAll(): void{
-    this.jogoService.findAll().subscribe(jogos => {
+    this.jogoService.read().subscribe(jogos => {
       console.log(jogos);
       this.jogos = jogos;
     });
