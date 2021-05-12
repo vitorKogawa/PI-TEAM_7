@@ -4,6 +4,9 @@ export interface IPagamento{
   cod_jogo?: number,
   cod_tipo_pagamento?: number,
   status?: boolean,
-  createdAt: Date,
-  updatedAt: Date
+  createdAt?: Date,
+  updatedAt?: Date
 }
+
+
+
