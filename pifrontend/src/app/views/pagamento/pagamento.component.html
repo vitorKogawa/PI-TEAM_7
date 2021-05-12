@@ -5,7 +5,7 @@
                 <mat-label>Número do cartão</mat-label>
                 <div class="mat-form-field-content">
                     <fa-icon [icon]="faCreditCard" class="icon"></fa-icon>
-                    <input name="frontCard" matInput>
+                    <input name="frontCard" matInput [(ngModel)]="numeroCartao">
                 </div>
             </mat-form-field>
 
@@ -44,7 +44,7 @@
                 </mat-select>
             </mat-form-field>
 
-            <button mat-raised-button class="pay-button">Pagar</button>
+            <button mat-raised-button class="pay-button" (click)="showNumeroCartao()">Pagar</button>
         </form>
     </mat-card>
     <h2 class="title">Page com o boleto via internet banking com o código abaixo</h2>
