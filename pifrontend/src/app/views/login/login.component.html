@@ -1,6 +1,6 @@
 <div class="container">
     <mat-card>
-        <form>
+        <form class="formulario">
             <a routerLink="/home" class="logo">
                 <img src="../../../../assets/img/AVAGAMES-logo.png" alt="Logo da Avagames">
             </a>
@@ -12,17 +12,18 @@
             <mat-form-field>
                 <input matInput placeholder="Senha:" [(ngModel)]="credentials.senha" name="senha">
             </mat-form-field>
+
+            <button mat-raised-button type="submit" (click)="login()">
+                Login
+            </button>
+                <nav>
+                    <ul>
+                        <li>
+                            <p>Ainda não tem conta?</p>
+                        </li>
+                        <li><a routerLink="">Cadastre-se</a></li>
+                    </ul>
+                </nav>
         </form>
-        <button mat-raised-button type="submit" (click)="login()">
-        Login
-    </button>
-        <nav>
-            <ul>
-                <li>
-                    <p>Ainda não tem conta?</p>
-                </li>
-                <li><a routerLink="">Cadastre-se</a></li>
-            </ul>
-        </nav>
     </mat-card>
 </div>
