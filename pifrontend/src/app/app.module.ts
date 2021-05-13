@@ -38,6 +38,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FeaturedGameComponent } from './views/home/components/featured-game/featured-game.component';
 import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-usuario.component';
 
+
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { PerfilComponent } from './views/perfil/perfil.component';
