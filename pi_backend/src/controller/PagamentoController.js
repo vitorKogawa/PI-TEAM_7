@@ -21,22 +21,12 @@ class PagamentoController {
     }
 
     async findAll(request, response) {
-        await Pagamento.findAll({
-                attributes: [
-                    "id",
-                    "cod_usuario",
-                    "cod_jogo",
-                    "cod_tipo_pagamento",
-                    "status",
-                    "createdAt",
-                ],
-            })
-            .then((data) => response.status(200).json(data))
-            .catch((err) => {
-                response
-                    .status(500)
-                    .json({ error: err.message || "erro na leitura de pagamentos" });
-            });
+        await Pagamento.sequelize
+            .query(
+                "select p.id, u.nome as username, j.nome as game, j.preco, tp.descricao , p.status, p.createdAt from tb_pagamento as p inner join tb_usuario as u on p.cod_usuario  = u.id inner join tb_jogo as j on p.cod_jogo = j.id inner join tb_tipo_pagamento as tp on p.cod_tipo_pagamento = tp.id order by p.id asc;"
+            )
+            .then((data) => response.json(data))
+            .catch((error) => response.json({ message: error.message }));
     }
 
     async findByPk(request, response) {
@@ -77,14 +67,16 @@ class PagamentoController {
     }
 
     async findAllByUserPk(request, response) {
-        const user_id = request.params.id;
-
-        if (!(user_id != null && user_id != undefined)) {
+        if (!request.params.id) {
             return response
                 .status(400)
-                .json({ error: `erro ao buscar pelo id de usuario ${user_id}` });
+                .json({ error: `Campo id não pode estar vazio` });
         } else {
-            await Pagamento.findAll({ where: { cod_usuario: user_id }, attributes: ["cod_jogo"] })
+            const { id } = request.params;
+            Pagamento.sequelize
+                .query(
+                    `select p.id, u.nome as username, j.nome as game, j.preco, tp.descricao , p.status, p.createdAt from tb_pagamento as p inner join tb_usuario as u on p.cod_usuario  = u.id inner join tb_jogo as j on p.cod_jogo = j.id inner join tb_tipo_pagamento as tp on p.cod_tipo_pagamento = tp.id  where p.cod_usuario = ${id} order by p.id asc;`
+                )
                 .then((data) => {
                     response.json(data);
                 })
@@ -93,6 +85,19 @@ class PagamentoController {
                         .status(500)
                         .json({ error: err.message || "erro na leitura de pagamentos" });
                 });
+        }
+    }
+
+    async aprovarPagamento(request, response) {
+        if (!request.params.id) {
+            return response
+                .status(400)
+                .json({ error: `Campo id não pode estar vazio` });
+        } else {
+            const { id } = request.params;
+            Pagamento.update({ status: true }, { where: { id } })
+                .then(data => response.sendStatus(200))
+                .catch(error => response.status(500).json({ message: error.message || `Erro interno ao aprovar pagamento de id ${id}` }))
         }
     }
 }

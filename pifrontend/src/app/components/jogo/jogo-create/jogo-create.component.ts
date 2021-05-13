@@ -13,7 +13,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class JogoCreateComponent implements OnInit {
   jogo: IJogo = {
-    id: '',
     nome: '',
     preco: 0,
     descricao: '',

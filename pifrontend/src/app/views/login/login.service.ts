@@ -11,12 +11,12 @@ import { IUsuario } from '../../models/IUsuario';
 export class LoginService {
   constructor(private http: HttpClient, private router: Router) {}
 
-  submit(credentials: IUsuario): Observable<ILogin> {
+  submit(credentials: IUsuario): Observable<ILogin>{
     return this.http.post<ILogin>('http://127.0.0.1:3333/login', credentials);
   }
 
-  signin(): void {
-    sessionStorage.removeItem("token");
+  logout(): void{
+    sessionStorage.removeItem('token');
     this.router.navigate(['/login']);
   }
 }
