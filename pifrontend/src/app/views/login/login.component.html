@@ -10,20 +10,20 @@
                 <input matInput placeholder="E-mail:" [(ngModel)]="credentials.email" name="email">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Senha:" [(ngModel)]="credentials.senha" name="senha">
+                <input type='password' matInput placeholder="Senha:" [(ngModel)]="credentials.senha" name="senha">
             </mat-form-field>
 
             <button mat-raised-button type="submit" (click)="login()">
                 Login
             </button>
-                <nav>
-                    <ul>
-                        <li>
-                            <p>Ainda não tem conta?</p>
-                        </li>
-                        <li><a routerLink="">Cadastre-se</a></li>
-                    </ul>
-                </nav>
+            <nav>
+                <ul>
+                    <li>
+                        <p>Ainda não tem conta?</p>
+                    </li>
+                    <li><a routerLink="">Cadastre-se</a></li>
+                </ul>
+            </nav>
         </form>
     </mat-card>
 </div>

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
@@ -40,5 +40,13 @@ export class JogoService {
   delete(id: string | undefined):Observable<IJogo> {
     const url = `${this.baseUrl}/${id}`
     return this.http.delete<IJogo>(url);
+  }
+
+  upload(files: Set<File>, url: string){
+    const formData = new FormData();
+    files.forEach(file => formData.append('file', file, file.name))
+    const request = new HttpRequest('POST', url, formData);
+    return this.http.request(request)
+
   }
 }

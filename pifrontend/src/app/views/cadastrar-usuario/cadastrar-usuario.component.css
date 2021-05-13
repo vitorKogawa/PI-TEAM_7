@@ -86,7 +86,7 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) {  
   .cadastroUsuario .formCadastro {
     width: 60%;
   }

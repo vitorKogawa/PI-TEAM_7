@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { JogoService } from '../jogo.service';
 import { Router } from '@angular/router';
 import { IJogo } from '../../../models/IJogo';
+import { HttpClient } from '@angular/common/http';
+
 // import Swal from 'sweetalert2'
 
 @Component({
@@ -21,9 +23,30 @@ export class JogoCreateComponent implements OnInit {
     imageUrl: '',
   };
 
-  constructor(private jogoService: JogoService, private router: Router) {}
+  files:Set<File> | undefined
+
+  constructor(private jogoService: JogoService, private router: Router, private http: HttpClient) {
+  }
 
   ngOnInit(): void {}
+
+  OnChange(event: any){  
+    const selectElements = <FileList>event.srcElement.files;   
+    const FileNames = [];
+    this.files = new Set();
+
+    for (let i = 0; i < selectElements.length; i++){
+      FileNames.push(selectElements[i].name)
+      this.files.add(selectElements[i]);
+    }
+  }
+
+  onUpload() {
+    if (this.files && this.files.size > 0){
+      this.jogoService.upload(this.files,'') .subscribe
+      (response => console.log('Upload Concluído'));
+    }
+  }
 
   createJogo(): void {
     this.jogoService.create(this.jogo).subscribe(() => {

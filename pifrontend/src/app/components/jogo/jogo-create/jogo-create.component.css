@@ -38,16 +38,18 @@ button {
     margin: 5px;
     height: 30px;
     width: 100%;
+    background-color: #212121;
+    color: #fff;
 }
 
 ::ng-deep .mat-focused .mat-form-field-label {
-    color: #f28705 !important;
+    color: #212121 !important;
   }
   ::ng-deep.mat-form-field-underline {
     background-color: white !important;
   }
   ::ng-deep.mat-form-field-ripple {
-    background-color: #F28705 !important;
+    background-color: #212121 !important;
     ;
   }
 
