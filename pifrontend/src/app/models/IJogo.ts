@@ -1,5 +1,5 @@
 export interface IJogo {
-  id?: number;
+  id?: string | undefined;
   nome?: string;
   preco?: number;
   descricao?: string;
