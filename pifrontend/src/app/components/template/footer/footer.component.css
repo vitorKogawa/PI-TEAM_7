@@ -1,7 +1,7 @@
+
 .footer {
-  /* position: fixed; */
-  bottom: 0;
-  display: flex;
+  position: absolute;
+  bottom:0;
   justify-content: center;
 }
 

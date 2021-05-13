@@ -1,0 +1,41 @@
+.container{
+     background-position:center;
+     margin: 0 auto;
+     padding: 0px;
+     width: 80%;
+ }
+ 
+ .title{
+    margin-top: 30px;
+    font-size: 20px;
+    display: flex;
+    width: 80%;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ 
+ form {
+    margin-top: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+ }
+
+
+ button {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 5px;
+     font-size: 14px;
+     margin: 5px;
+     height: 30px;
+     width: 100%;
+ }
+  
+  ::ng-deep.mat-form-field-underline {
+    background-color: black !important;
+  }
+ 
+
+ 

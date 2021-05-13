@@ -33,6 +33,8 @@ import { JogoReadComponent } from './components/jogo/jogo-read/jogo-read.compone
 
 import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
 import { BarrapesquisaComponent } from './components/template/barrapesquisa/barrapesquisa.component';
+import { JogoUpdateComponent } from './components/jogo/jogo-update/jogo-update.component';
+import { JogoDeleteComponent } from './components/jogo/jogo-delete/jogo-delete.component';
 import { CardSliderComponent } from './views/home/components/card-slider/card-slider.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FeaturedGameComponent } from './views/home/components/featured-game/featured-game.component';
@@ -60,6 +62,10 @@ registerLocaleData (localePt);
     CadastrarUsuarioComponent,
     CardSliderComponent,
     FeaturedGameComponent
+    JogoUpdateComponent,
+    JogoDeleteComponent,
+
+
   ],
   imports: [
     BrowserModule,

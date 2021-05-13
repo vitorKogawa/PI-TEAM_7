@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { JogoService } from '../jogo.service';
 import { Router } from '@angular/router'
-import { Jogo } from '../jogo.model';
+import { IJogo } from '../jogo.model';
+import Swal from 'sweetalert2'
 
 
 @Component({
@@ -12,14 +13,15 @@ import { Jogo } from '../jogo.model';
 export class JogoCreateComponent implements OnInit {
 
 
-  jogo: Jogo = {
-    id: NaN,
+  jogo: IJogo = {
+    id: '',
     nome: '',
-    preco: NaN,
-    quantidade: NaN,
+    preco: 0,
     descricao: '',
-    cod_genero: '',
-    espaco_arm: NaN,
+    espaco_arm: 0,
+    genero : '',
+    status: true,
+    imageUrl :''
   }
 
   constructor(private jogoService: JogoService,
@@ -30,7 +32,7 @@ export class JogoCreateComponent implements OnInit {
 
   createJogo():void{
     this.jogoService.create(this.jogo).subscribe(() => {
-      this.jogoService.showMessage('Jogo cadastrado com sucesso!')
+      this.jogoService.showMessage("Jogo cadastrado com sucesso!");
       this.router.navigate(["/jogos"])
     })
   }
@@ -39,6 +41,5 @@ export class JogoCreateComponent implements OnInit {
     this.router.navigate(["/jogos"])  
 
   }
-
 }
 

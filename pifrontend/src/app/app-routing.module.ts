@@ -6,6 +6,8 @@ import { HomeComponent } from './views/home/home.component';
 import { PagamentoComponent } from "./views/pagamento/pagamento.component"
 import { JogoCrudComponent } from "./views/jogo-crud/jogo-crud.component"
 import { JogoCreateComponent } from './components/jogo/jogo-create/jogo-create.component';
+import { JogoUpdateComponent } from './components/jogo/jogo-update/jogo-update.component';
+import { JogoDeleteComponent } from './components/jogo/jogo-delete/jogo-delete.component';
 import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-usuario.component';
 
 
@@ -34,6 +36,15 @@ const routes: Routes = [
   {
     path: 'carousel',
     component: CarrouselTesteComponent
+  },
+  {
+    path: 'jogos/update/:id',
+    component: JogoUpdateComponent
+  },
+  {
+    path: 'jogos/delete/:id',
+    component: JogoDeleteComponent
+  },
   },
   {
     path: 'cadastroUsuario',
