@@ -1,24 +1,20 @@
 import JogoController from "../controller/JogoController";
-import { Router } from "express";
+import multer from "multer";
+import multerConfig from "../config/multer.config";
+import express, { Router } from "express";
+import { resolve } from 'path'
+
+const upload = multer(multerConfig);
 
 const jogoRouter = new Router();
 
-//Criar jogo_controller
-jogoRouter.post("/jogo", JogoController.store);
+jogoRouter.post("/jogo", upload.single("file"), JogoController.store);
+jogoRouter.get("/jogo", JogoController.findAll);
+jogoRouter.put("/:id", JogoController.update);
+jogoRouter.get("/jogo/:id", JogoController.findByPk);
+jogoRouter.put("/jogo/disable/:id", JogoController.disableByPk);
+jogoRouter.put("/jogo/disable", JogoController.disableAll);
 
-//Listar todos os jogo_controller
-// jogo_router.get("/jogo", jogo_controller.findAll);
+jogoRouter.use('/jogo/file', express.static(resolve(__dirname, '..', '..', 'tmp', 'uploads')));
 
-// //Atualizar jogo por id
-// jogo_router.put("/:id", jogo_controller.update);
-
-// //Buscar jogo por id
-// jogo_router.get("/jogo/:id", jogo_controller.findByPk);
-
-// //Deletar jogo por id
-// jogo_router.put("/jogo/disable/:id", jogo_controller.disableByPk);
-
-// // Deletar todos os jogo_controller
-// jogo_router.put("/", jogo_controller.disableAll);
-
-export { jogoRouter }
+export { jogoRouter };

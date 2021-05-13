@@ -1,21 +1,29 @@
 <div class="container">
-<mat-card>  
-    <form>
-        <a routerLink="/home" class="logo">
-            <img src="../../../../assets/img/AVAGAMES-logo.png" alt="Logo da Avagames">
-        </a>
-        <mat-card-title>Login  
-        </mat-card-title>
-        <mat-form-field>
-            <input matInput placeholder="Usuario" >
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Senha" >
-        </mat-form-field>
-    </form>
-        <a class="aLink" routerLink="">Recuperar senha?</a>
-    <button mat-raised-button (click)="navigateToHome()">
-        Login
-    </button>
-</mat-card>
+    <mat-card>
+        <form class="formulario">
+            <a routerLink="/home" class="logo">
+                <img src="../../../../assets/img/AVAGAMES-logo.png" alt="Logo da Avagames">
+            </a>
+            <mat-card-title>Login
+            </mat-card-title>
+            <mat-form-field>
+                <input matInput placeholder="E-mail:" [(ngModel)]="credentials.email" name="email">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Senha:" [(ngModel)]="credentials.senha" name="senha">
+            </mat-form-field>
+
+            <button mat-raised-button type="submit" (click)="login()">
+                Login
+            </button>
+                <nav>
+                    <ul>
+                        <li>
+                            <p>Ainda não tem conta?</p>
+                        </li>
+                        <li><a routerLink="">Cadastre-se</a></li>
+                    </ul>
+                </nav>
+        </form>
+    </mat-card>
 </div>

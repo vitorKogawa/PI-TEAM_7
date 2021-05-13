@@ -46,10 +46,9 @@ mat-card-title {
   text-align: center;
   text-decoration: none;
   margin-bottom: 10px;
-
 }
 
-form {
+.formulario {
   display: flex;
   flex-direction: column;
 }
@@ -58,9 +57,39 @@ button {
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 5px;
+  font-size: 15px;
   color: white;
-  margin-top: 40px;
+  margin-top: 30px;
   background-color: #f28705;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+nav ul li a:after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: #f28705;
+  display: block;
+  transition: 0.5s;
+}
+
+nav ul li:hover a:after {
+  width: 100%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 
 ::ng-deep .mat-focused .mat-form-field-label {
@@ -77,4 +106,39 @@ button {
   /*change color of underline when focused*/
   background-color: #f28705 !important;
   ;
+}
+
+@media (max-width: 575px) {
+
+  mat-card {
+    width: 100%;
+  }
+
+  mat-card-title {
+    font-size: 43px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  mat-card {
+    width: 100%;
+  }
+
+  mat-card-title {
+    font-size: 43px;
+  }
+}
+
+@media (max-width: 979px) {
+
+  mat-card {
+
+    width: 100%;
+  }
+
+  button {
+    align-content: center;
+  }
+
 }

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 //icons
 import { faCreditCard, faUserCircle, faCalendarAlt } from '@fortawesome/free-regular-svg-icons'
 import { faBarcode } from "@fortawesome/free-solid-svg-icons"
+import { IPagamento } from 'src/app/models/IPagamento';
 
 
 @Component({
@@ -11,15 +12,14 @@ import { faBarcode } from "@fortawesome/free-solid-svg-icons"
   styleUrls: ['./pagamento.component.css']
 })
 export class PagamentoComponent implements OnInit {
+  constructor() { }
+
   faCreditCard = faCreditCard;
   faUserCircle = faUserCircle;
   faCalendarAlt = faCalendarAlt;
   faBarcode = faBarcode;
 
   numeroBoleto: string = "34191.79001 01043.510047 91020.150008 7 86160026000";
-
-  constructor() { }
-
   parcelas: Array<{ value: number }> = [
     {
       value: 1
@@ -38,6 +38,12 @@ export class PagamentoComponent implements OnInit {
     },
   ]
 
+  numeroCartao: string = "";
+
   ngOnInit(): void {
+  }
+
+  showNumeroCartao(): void {
+    console.log(this.numeroCartao);
   }
 }

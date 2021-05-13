@@ -8,6 +8,7 @@ import { JogoCrudComponent } from "./views/jogo-crud/jogo-crud.component"
 import { JogoCreateComponent } from './components/jogo/jogo-create/jogo-create.component';
 import { JogoUpdateComponent } from './components/jogo/jogo-update/jogo-update.component';
 import { JogoDeleteComponent } from './components/jogo/jogo-delete/jogo-delete.component';
+import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-usuario.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,11 @@ const routes: Routes = [
     path: 'jogos/delete/:id',
     component: JogoDeleteComponent
   },
+  },
+  {
+    path: 'cadastroUsuario',
+    component: CadastrarUsuarioComponent
+  }
 ];
 
 @NgModule({
