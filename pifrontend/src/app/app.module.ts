@@ -40,6 +40,7 @@ import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-u
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { PerfilComponent } from './views/perfil/perfil.component';
 registerLocaleData (localePt);
 
 @NgModule({
@@ -58,7 +59,8 @@ registerLocaleData (localePt);
     BarrapesquisaComponent,
     CadastrarUsuarioComponent,
     CardSliderComponent,
-    FeaturedGameComponent
+    FeaturedGameComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+<div id="perfil">
+    <div id="meusJogos">
+        <h2>Meus Jogos</h2>
+
+        <div id="jogos">
+            <div class="jogo">
+                <img src="" alt="">
+
+                <p>Nome</p>
+            </div>
+        </div>
+    </div>
+
+    <button (click)="visualizarInformacao()">Minhas Informações</button>
+
+    <div id="AtualizarPerfil">
+        <h2>Minhas Informações</h2>
+
+        <form action="">
+            <input [(ngModel)]="atualizarPerfil.nome" name="nome" type="text" placeholder="Nome">
+
+            <input [(ngModel)]="atualizarPerfil.cpf" name="cpf" type="text" placeholder="CPF">
+
+            <input [(ngModel)]="atualizarPerfil.usuario" name="usuario" type="text" placeholder="Username">
+
+            <input [(ngModel)]="atualizarPerfil.email" name="email" type="email" placeholder="E-mail">
+        </form>
+        <button (click)="AtualizarUsuario()" >Atualizar </button>
+    </div>
+</div>

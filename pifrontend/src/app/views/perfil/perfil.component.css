@@ -1,0 +1,48 @@
+#perfil {
+    width: 100%;
+    display: flex;
+}
+
+#perfil #meusJogos{
+    width: 100%;
+    background-color: blue;
+}
+
+
+#perfil #AtualizarPerfil {
+    width: 500px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: -500px;
+    transition: 3s;
+}
+
+#perfil #AtualizarPerfil form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#perfil #AtualizarPerfil input {
+    height: 30px;
+    width: 80%;
+    margin: 0 auto 20px;
+    background-color: gray;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    padding: 0;
+}
+
+#perfil #AtualizarPerfil button {
+    height: 40px;
+    border-radius: 3px;
+    border-color: orange;
+    width: 50%;
+    margin: 0 auto 20px;
+    background-color: #ffa500;
+    color: white;
+    
+}

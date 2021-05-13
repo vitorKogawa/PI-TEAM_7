@@ -7,6 +7,7 @@ import { PagamentoComponent } from "./views/pagamento/pagamento.component"
 import { JogoCrudComponent } from "./views/jogo-crud/jogo-crud.component"
 import { JogoCreateComponent } from './components/jogo/jogo-create/jogo-create.component';
 import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-usuario.component';
+import { PerfilComponent } from './views/perfil/perfil.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path: 'cadastroUsuario',
     component: CadastrarUsuarioComponent
+  },
+  {
+    path: 'perfil',
+    component: PerfilComponent
   }
 ];
 
