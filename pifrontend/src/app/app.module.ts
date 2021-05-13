@@ -34,6 +34,7 @@ import { JogoReadComponent } from './components/jogo/jogo-read/jogo-read.compone
 
 
 
+
 //para a moeda BR//
 import  localePt  from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common'
@@ -41,6 +42,8 @@ registerLocaleData (localePt);
 
 import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
 import { BarrapesquisaComponent } from './components/template/barrapesquisa/barrapesquisa.component';
+import { JogoUpdateComponent } from './components/jogo/jogo-update/jogo-update.component';
+import { JogoDeleteComponent } from './components/jogo/jogo-delete/jogo-delete.component';
 
 
 
@@ -59,6 +62,8 @@ import { BarrapesquisaComponent } from './components/template/barrapesquisa/barr
     CarrouselTesteComponent,
     CarouselCardsComponent,
     BarrapesquisaComponent,
+    JogoUpdateComponent,
+    JogoDeleteComponent,
 
 
   ],

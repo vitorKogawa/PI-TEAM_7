@@ -11,17 +11,15 @@
                 <input matInput placeholder="Preço (R$)" [(ngModel)]="jogo.preco" name="preco">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Quantidade" [(ngModel)]="jogo.quantidade" name="quantidade">
-            </mat-form-field>
-            <mat-form-field>
                 <input matInput placeholder="Descrição" [(ngModel)]="jogo.descricao" name="descricao">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Gêreno" [(ngModel)]="jogo.cod_genero" name="genero">
+                <input matInput placeholder="Gêreno" [(ngModel)]="jogo.genero" name="genero">
             </mat-form-field>
             <mat-form-field>
                 <input matInput placeholder="Espaço de armazemamento" [(ngModel)]="jogo.espaco_arm" name="espaco">
             </mat-form-field>
+
             <button mat-raised-button (click)="createJogo()" color="basic">
                 SALVAR
             </button>

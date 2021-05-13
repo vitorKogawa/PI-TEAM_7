@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Jogo } from '../jogo.model';
+import { IJogo } from '../jogo.model';
 import { JogoService } from '../jogo.service';
 
 
@@ -10,17 +10,15 @@ import { JogoService } from '../jogo.service';
 })
 export class JogoReadComponent implements OnInit {
 
-  jogos!: Jogo[]
-  displayedColumns = ['id', 'nome', 'preco','quantidade','cod_genero','espaco_arm','update','delete']
+  jogos!: IJogo[];
+  displayedColumns = ['id', 'nome', 'preco','espaco_arm','genero','action']  
 
   constructor(private jogoService: JogoService) { }
 
   ngOnInit(): void {
     this.jogoService.read().subscribe(jogos => {
       this.jogos = jogos
-      console.log(jogos)
     })
-
   }
 
 }

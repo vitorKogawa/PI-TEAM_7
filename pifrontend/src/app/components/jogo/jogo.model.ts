@@ -1,10 +1,11 @@
 
-export interface Jogo {
-      id: number
-      nome: string
-      preco: number
-      quantidade: number
-      descricao: string
-      cod_genero: string
-      espaco_arm: number
-}
+export interface IJogo{
+      id?: string | undefined ,
+      nome?: string,
+      preco?: number ,
+      descricao?: string,
+      espaco_arm?: number,
+      genero?: string,
+      status?: boolean
+      imageUrl?: string
+    }

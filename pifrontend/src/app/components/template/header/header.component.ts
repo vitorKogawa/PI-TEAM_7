@@ -13,6 +13,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  status_adm: boolean = false;
+  status_adm: boolean = true;
 
 }
