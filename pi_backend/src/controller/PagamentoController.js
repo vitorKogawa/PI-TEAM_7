@@ -21,7 +21,16 @@ class PagamentoController {
     }
 
     async findAll(request, response) {
-        await Pagamento.findAll()
+        await Pagamento.findAll({
+                attributes: [
+                    "id",
+                    "cod_usuario",
+                    "cod_jogo",
+                    "cod_tipo_pagamento",
+                    "status",
+                    "createdAt",
+                ],
+            })
             .then((data) => response.status(200).json(data))
             .catch((err) => {
                 response

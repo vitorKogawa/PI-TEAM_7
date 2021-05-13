@@ -9,9 +9,9 @@ class Pagamento extends Model {
     }
 
     static associate(models) {
-        Pagamento.belongsTo(models.User, { foreignKey: "cod_usuario" });
-        Pagamento.belongsTo(models.Jogo, { foreignKey: "cod_jogo" });
-        Pagamento.belongsTo(models.TipoPagamento, { foreignKey: "cod_tipo_pagamento" });
+        this.belongsTo(models.User, { foreignKey: "cod_usuario" });
+        this.belongsTo(models.Jogo, { foreignKey: "cod_jogo" });
+        this.belongsTo(models.TipoPagamento, { foreignKey: "cod_tipo_pagamento" });
     }
 }
 
