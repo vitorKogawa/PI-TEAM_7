@@ -11,7 +11,6 @@ import { IJogo } from '../../../models/IJogo';
 })
 export class JogoCreateComponent implements OnInit {
   jogo: IJogo = {
-    id: '',
     nome: '',
     preco: 0,
     descricao: '',
@@ -26,6 +25,8 @@ export class JogoCreateComponent implements OnInit {
   ngOnInit(): void {}
 
   createJogo(): void {
+    console.log(this.jogo);
+
     this.jogoService.create(this.jogo).subscribe(() => {
       this.jogoService.showMessage('Jogo cadastrado com sucesso!');
       this.router.navigate(['/jogos']);

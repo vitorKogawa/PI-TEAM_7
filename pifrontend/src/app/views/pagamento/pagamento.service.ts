@@ -15,4 +15,12 @@ export class PagamentoService {
   create(pagamento: IPagamento): Observable<IPagamento>{
     return this.httpClient.post<IPagamento>(this.baseUrl, pagamento);
   }
+
+  read(): Observable<IPagamento[]>{
+    return this.httpClient.get<IPagamento[]>(this.baseUrl);
+  }
+
+  aprovarPagamento(id: string | null){
+    this.httpClient.put(`${this.baseUrl}/aprovar/${id}`, {});
+  }
 }

@@ -41,8 +41,14 @@ import { FeaturedGameComponent } from './views/home/components/featured-game/fea
 import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-usuario.component';
 import { PerfilComponent } from './views/perfil/perfil.component';
 
+import { AuthGuardService } from './guards/auth/auth-guard.service'
+
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { LoginService } from './views/login/login.service';
+import { Error404Component } from './views/error/error404/error404/error404.component';
+import { WelcomeComponent } from './views/welcome/welcome/welcome.component';
+import { PedidosComponent } from './views/pedidos/pedidos.component';
 import { CardComponent } from './views/perfil/components/card/card.component';
 registerLocaleData (localePt);
 
@@ -67,7 +73,9 @@ registerLocaleData (localePt);
     JogoDeleteComponent,
     PerfilComponent,
     CardComponent
-
+    Error404Component,
+    WelcomeComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,
@@ -97,6 +105,8 @@ registerLocaleData (localePt);
       provide: LOCALE_ID,
       useValue: 'pt-BR',
     },
+    LoginService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

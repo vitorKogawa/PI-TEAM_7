@@ -11,6 +11,8 @@ class JogoController {
         const { nome, preco, quantidade, descricao, espaco_arm, genero, status } =
         request.body;
 
+        console.log(request.file)
+
         const newJogo = {
             nome,
             preco,
@@ -21,6 +23,7 @@ class JogoController {
             status: status ? status : false,
             imageUrl: request.file.filename,
         };
+
 
         await Jogo.create(newJogo)
             .then((data) => {
@@ -58,7 +61,7 @@ class JogoController {
     }
 
     async findAll(request, response) {
-        Jogo.findAll()
+        Jogo.findAll({ limit: 5 })
             .then((data) => {
                 response.send(data);
             })

@@ -1,15 +1,30 @@
 <div class="container-principal">
-    <div class="card-generos">
+    <div class="sidebar">
         <div class="titulo">
-            <h4>MENU</h4>
-            <a href="">Início</a>
-            <a href="">Meu perfil</a>
-            <a href="">Meus jogos</a>
-            <a href="">Vistos recentemente</a>
-            <a href="">Favoritos</a>
-            <a href="" *ngIf="status_adm">Usuários cadastrados</a>
-            <a href="" *ngIf="status_adm">Jogos cadastrados</a>
-            <a href="" *ngIf="status_adm">Pagamentos</a>
+            <h4>Menu</h4>
+        </div>
+        <div class="sidebar-items">
+            <a routerLink="/home">
+                <mat-icon class="mat-18">home</mat-icon>
+                Início
+            </a>
+            <a routerLink="/home">
+                <mat-icon class="mat-18">account_circle</mat-icon>
+                Meu perfil
+            </a>
+            <a routerLink="/home">
+                <mat-icon class="mat-18">dashboard</mat-icon>
+                Meus jogos
+            </a>
+            <a routerLink="/pedidos">
+                <mat-icon class="mat-18">article</mat-icon>
+                Pedidos
+            </a>
+            <a routerLink="/home">
+                <mat-icon class="mat-18">favorite</mat-icon>
+                Favoritos
+            </a>
+            <button (click)="logout()">Sair</button>
         </div>
     </div>
 
@@ -19,10 +34,9 @@
         </div>
         <app-barrapesquisa class="pesquisar"></app-barrapesquisa>
         <app-card-slider></app-card-slider>
-        <!-- <app-featured-game></app-featured-game> -->
+        <app-featured-game></app-featured-game>
         <app-card-slider></app-card-slider>
         <app-featured-game></app-featured-game>
         <app-card-slider></app-card-slider>
-
     </div>
 </div>
