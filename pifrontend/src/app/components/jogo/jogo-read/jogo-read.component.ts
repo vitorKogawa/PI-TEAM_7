@@ -10,21 +10,12 @@ import { JogoService } from '../jogo.service';
 export class JogoReadComponent implements OnInit {
   jogos: IJogo[] = [];
 
-  displayedColumns = [
-    'id',
-    'nome',
-    'preco',
-    'quantidade',
-    'genero',
-    'espaco_arm',
-    'actions',
-  ];
+  displayedColumns = ['id', 'nome', 'preco', 'espaco_arm', 'genero', 'action'];
 
   constructor(private jogoService: JogoService) {}
 
   ngOnInit(): void {
     this.jogoService.read().subscribe((jogos) => {
-      console.log(jogos);
       this.jogos = jogos;
     });
   }

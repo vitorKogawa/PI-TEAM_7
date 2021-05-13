@@ -33,15 +33,17 @@ import { JogoReadComponent } from './components/jogo/jogo-read/jogo-read.compone
 
 import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
 import { BarrapesquisaComponent } from './components/template/barrapesquisa/barrapesquisa.component';
+import { JogoUpdateComponent } from './components/jogo/jogo-update/jogo-update.component';
+import { JogoDeleteComponent } from './components/jogo/jogo-delete/jogo-delete.component';
 import { CardSliderComponent } from './views/home/components/card-slider/card-slider.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FeaturedGameComponent } from './views/home/components/featured-game/featured-game.component';
 import { CadastrarUsuarioComponent } from './views/cadastrar-usuario/cadastrar-usuario.component';
-
+import { PerfilComponent } from './views/perfil/perfil.component';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
-import { PerfilComponent } from './views/perfil/perfil.component';
+import { CardComponent } from './views/perfil/components/card/card.component';
 registerLocaleData (localePt);
 
 @NgModule({
@@ -61,7 +63,11 @@ registerLocaleData (localePt);
     CadastrarUsuarioComponent,
     CardSliderComponent,
     FeaturedGameComponent,
-    PerfilComponent
+    JogoUpdateComponent,
+    JogoDeleteComponent,
+    PerfilComponent,
+    CardComponent
+
   ],
   imports: [
     BrowserModule,

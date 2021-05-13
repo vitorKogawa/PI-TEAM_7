@@ -32,7 +32,7 @@ class UserController {
                 const newUser = {
                     usuario,
                     senha,
-                    ativo: ativo ? ativo : false,
+                    ativo: true,
                     status_adm: status_adm ? status_adm : false,
                     nome,
                     cpf,

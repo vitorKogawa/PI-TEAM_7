@@ -1,0 +1,20 @@
+<div class="container">
+    <span class="title">
+        Atualizar Jogo
+    </span>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="jogo.nome" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" [(ngModel)]="jogo.preco" name="preco">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="updateJogo()">
+        Atualizar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</div>

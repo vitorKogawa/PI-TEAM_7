@@ -1,22 +1,12 @@
 #perfil {
     width: 100%;
-    display: flex;
 }
-
-#perfil #meusJogos{
-    width: 100%;
-    background-color: blue;
-}
-
 
 #perfil #AtualizarPerfil {
     width: 500px;
-    background-color: red;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    right: -500px;
-    transition: 3s;
+    padding: 10px;
 }
 
 #perfil #AtualizarPerfil form {
@@ -29,9 +19,8 @@
     height: 30px;
     width: 80%;
     margin: 0 auto 20px;
-    background-color: gray;
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
     outline: none;
     padding: 0;
 }

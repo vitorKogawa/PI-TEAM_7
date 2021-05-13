@@ -20,7 +20,14 @@ export class PerfilComponent implements OnInit {
   };
   
   ngOnInit(): void {
-    this.BuscarUsuarioId(1)
+    this.BuscarUsuarioId(this.PegarToken())
+  }
+
+  PegarToken(): any{
+    var token = sessionStorage.getItem('token')
+
+    if(token != null)
+      return JSON.parse(token).user.id
   }
 
   BuscarUsuarioId(id: number): void {
@@ -48,6 +55,7 @@ export class PerfilComponent implements OnInit {
   }
 
   visualizarInformacao(): void {
-  }
+    
+  } 
 
 }
