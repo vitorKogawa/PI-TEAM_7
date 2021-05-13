@@ -45,7 +45,6 @@ const routes: Routes = [
     path: 'jogos/delete/:id',
     component: JogoDeleteComponent
   },
-  },
   {
     path: 'cadastroUsuario',
     component: CadastrarUsuarioComponent
