@@ -61,7 +61,7 @@ registerLocaleData (localePt);
     BarrapesquisaComponent,
     CadastrarUsuarioComponent,
     CardSliderComponent,
-    FeaturedGameComponent
+    FeaturedGameComponent,
     JogoUpdateComponent,
     JogoDeleteComponent,
 
