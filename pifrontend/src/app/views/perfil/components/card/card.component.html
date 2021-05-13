@@ -1,8 +1,8 @@
 <div class="card-wrapper">
-    <mat-card class="card-wrapper-item">
+    <mat-card class="card-wrapper-item" *ngFor="let jogo of jogos">
         <img matCardImage src="" alt="imagem jogo">
         <mat-card-header class="flex-display-center">
-            <mat-card-title class="text-align-center">Nome</mat-card-title>
+            <mat-card-title class="text-align-center">{{ jogo.nome }} Nome</mat-card-title>
         </mat-card-header>
     </mat-card>
 </div>

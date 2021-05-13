@@ -11,7 +11,11 @@ const baseUrl = 'http://localhost:3333/pagamento/usuario';
 export class CardService {
   constructor(private http: HttpClient) {}
 
-  get(id: number): Observable<IUsuario> {
+  get(id: number): Observable<any> {
     return this.http.get(`${baseUrl}/${id}`);
+  }
+
+  getJogo(id: number): Observable<any> {
+    return this.http.get(`http://localhost:3333/jogo/${id}`);
   }
 }

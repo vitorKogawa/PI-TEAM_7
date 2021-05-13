@@ -84,7 +84,7 @@ class PagamentoController {
                 .status(400)
                 .json({ error: `erro ao buscar pelo id de usuario ${user_id}` });
         } else {
-            await Pagamento.findAll({ where: { cod_usuario: user_id } })
+            await Pagamento.findAll({ where: { cod_usuario: user_id }, attributes: ["cod_jogo"] })
                 .then((data) => {
                     response.json(data);
                 })
