@@ -35,12 +35,10 @@ export class PedidosComponent implements OnInit {
 
     if (json.user.status_adm) {
       this.pagamentoService.read().subscribe((pagamentos) => {
-        // console.log(pagamentos[0]);
         this.pagamentos = pagamentos[0];
       });
     } else {
       this.pagamentoService.readUser(json.user.id).subscribe((pagamentos) => {
-        // console.log(pagamentos[0]);
         this.pagamentos = pagamentos[0];
       });
     }

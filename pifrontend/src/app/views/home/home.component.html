@@ -1,26 +1,32 @@
 <div class="container-principal">
     <div class="sidebar">
-        <div class="titulo">
+        <!-- <div class="titulo">
             <h4>Menu</h4>
-        </div>
+        </div> -->
         <div class="sidebar-items">
             <a routerLink="/home">
                 <mat-icon class="mat-18">home</mat-icon>
                 Início
             </a>
-            <a routerLink="/home">
+            <a routerLink="/perfil">
                 <mat-icon class="mat-18">account_circle</mat-icon>
                 Meu perfil
             </a>
-            <a routerLink="/home">
+            <!-- <a routerLink="/meus-jogos">
                 <mat-icon class="mat-18">dashboard</mat-icon>
                 Meus jogos
-            </a>
+            </a> -->
             <a routerLink="/pedidos">
                 <mat-icon class="mat-18">article</mat-icon>
                 Pedidos
             </a>
+            <a routerLink="/favoritos">
+                <mat-icon class="mat-18">favorite</mat-icon>
+                Favoritos
+            </a>
 
+
+            <!-- ROTAS DE ADMIN -->
             <a routerLink="/usuarios" *ngIf="status_adm">
                 <mat-icon class="mat-18">supervisor_account</mat-icon>
                 Usuários
@@ -40,10 +46,11 @@
         <div class="carousel-img">
             <app-carrousel-teste></app-carrousel-teste>
         </div>
+        <p>Em Alta</p>
         <app-card-slider></app-card-slider>
-        <app-featured-game></app-featured-game>
-        <app-card-slider></app-card-slider>
-        <app-featured-game></app-featured-game>
-        <app-card-slider></app-card-slider>
+        <!-- <app-featured-game></app-featured-game> -->
+        <!-- <app-card-slider></app-card-slider> -->
+        <!-- <app-featured-game></app-featured-game> -->
+        <!-- <app-card-slider></app-card-slider> -->
     </div>
 </div>

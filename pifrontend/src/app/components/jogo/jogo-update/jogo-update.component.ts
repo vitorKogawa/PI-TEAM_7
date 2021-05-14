@@ -12,6 +12,7 @@ export class JogoUpdateComponent implements OnInit {
   jogo: IJogo = {
     nome: '',
     preco: 0,
+    status: false
   };
 
   constructor(
@@ -30,7 +31,7 @@ export class JogoUpdateComponent implements OnInit {
   updateJogo(): void {
     this.jogoService.update(this.jogo).subscribe(() => {
       this.jogoService.showMessage('Jogo atualizado com sucesso!');
-      this.router.navigate(['/jogos']);
+      this.router.navigate(['/home']);
     });
   }
 

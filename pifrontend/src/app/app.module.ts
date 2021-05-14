@@ -53,6 +53,7 @@ import { PedidosComponent } from './views/pedidos/pedidos.component';
 import { CardComponent } from './views/perfil/components/card/card.component';
 import { FavoritosComponent } from './views/favoritos/favoritos.component';
 import { AllUsuariosComponent } from './views/usuarios/all-usuarios.component';
+import { MeusJogosComponent } from './views/meus-jogos/meus-jogos.component';
 registerLocaleData (localePt);
 
 @NgModule({
@@ -80,7 +81,8 @@ registerLocaleData (localePt);
     WelcomeComponent,
     PedidosComponent,
     FavoritosComponent,
-    AllUsuariosComponent
+    AllUsuariosComponent,
+    MeusJogosComponent
   ],
   imports: [
     BrowserModule,

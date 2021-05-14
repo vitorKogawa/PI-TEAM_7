@@ -5,8 +5,10 @@
 .container-principal {
     display: flex;
     flex-direction: row;
-    padding: 5px;
-    background-color: #c4c4c4;
+    padding: 20px 50px;
+    background-color: #151d27;
+    width: 100%;
+    min-height: 100vh;
 }
 
 
@@ -16,7 +18,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #dddddd;
+    background-color: transparent;
     flex: 0.85;
 }
 
@@ -28,7 +30,7 @@
 /* MENU LATERAL */
 
 .sidebar {
-    background-color: #dddddd;
+    background-color: #151d27;
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -79,8 +81,8 @@ a {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    color: #000;
-    font-size: 20px;
+    color: #fff;
+    font-size: 18px;
     padding: 20px 10px;
     text-align: center;
     text-decoration: none;

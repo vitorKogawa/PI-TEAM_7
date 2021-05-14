@@ -1,8 +1,8 @@
 export interface IPagamento{
   id?: number,
-  cod_usuario?: number,
-  cod_jogo?: number,
-  cod_tipo_pagamento?: number,
+  cod_usuario?: string | undefined,
+  cod_jogo?: string | undefined,
+  cod_tipo_pagamento?: string | undefined,
   status?: boolean,
   createdAt?: Date,
   updatedAt?: Date

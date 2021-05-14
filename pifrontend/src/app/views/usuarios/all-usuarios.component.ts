@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JogoService } from 'src/app/components/jogo/jogo.service';
 import { ILogin } from 'src/app/models/ILogin';
 import { IUsuario } from 'src/app/models/IUsuario';
 import { UsuariosService } from './usuarios.service';
@@ -9,7 +10,7 @@ import { UsuariosService } from './usuarios.service';
   styleUrls: ['./all-usuarios.component.css'],
 })
 export class AllUsuariosComponent implements OnInit {
-  constructor(private usuarioService: UsuariosService) {}
+  constructor(private usuarioService: UsuariosService, private jogoService: JogoService) {}
 
   usuarios: Array<IUsuario> = [];
 
@@ -33,7 +34,7 @@ export class AllUsuariosComponent implements OnInit {
   }
 
   disableById(userId: number): void {
-    this.usuarioService.disableByID(userId).subscribe(() => alert('Usuário desabilitado com sucesso.'))
+    this.usuarioService.disableByID(userId).subscribe(() => this.jogoService.showMessage('Usuário desabilitado com sucesso!'))
     window.location.reload();
   }
 }

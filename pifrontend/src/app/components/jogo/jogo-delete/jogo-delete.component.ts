@@ -30,7 +30,7 @@ export class JogoDeleteComponent implements OnInit {
   deleteJogo(): void {
     this.jogoService.delete(this.jogo.id).subscribe(() => {
       this.jogoService.showMessage('Produto excluido com sucesso');
-      this.router.navigate(['/jogos']);
+      this.router.navigate(['/home']);
     });
   }
 

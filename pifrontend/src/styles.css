@@ -42,5 +42,50 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.msg-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.msg-error {
+    background-color: #e35e6b;
+    color: #fff;
+}
+
+.nothing-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nothing-wrapper>img {
+    width: 20%;
+    margin: 50px;
+}
+
+.nothing-wrapper>h1 {
+    padding: 20px;
+}
+
+.nothing-wrapper>a {
+    border: none;
+    background-color: #F9A826;
+    color: #fff;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}

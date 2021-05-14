@@ -16,11 +16,12 @@ export class CardComponent implements OnInit {
   }
 
   jogos: Array<any> = [];
-  
+
   BuscarJogosUsuario(id: number): void {
     this.cardService.get(id).subscribe(
       (data) => {
         this.jogos = data[0]
+        console.log(data)
         console.log(this.jogos)
       },
       (error) => console.log(error)

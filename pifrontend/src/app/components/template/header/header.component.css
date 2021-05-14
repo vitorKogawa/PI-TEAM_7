@@ -6,9 +6,11 @@ a {
 
 .header {
     height: auto;
-    background-color: #212121;
+    background-color: #151d27;
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid #1d2631;
+    box-shadow: 0 2px 7px 0 rgb(0 0 0 / 30%)
 }
 
 .header .logo {

@@ -9,6 +9,9 @@
         <mat-form-field>
             <input matInput placeholder="Preço (R$)" [(ngModel)]="jogo.preco" name="preco">
         </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Status" [(ngModel)]="jogo.status" name="status">
+        </mat-form-field>
     </form>
     <button mat-raised-button (click)="updateJogo()">
         Atualizar

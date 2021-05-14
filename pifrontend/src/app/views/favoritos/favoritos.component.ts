@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JogoService } from 'src/app/components/jogo/jogo.service';
 import { IFavorito } from 'src/app/models/IFavorito';
 import { ILogin } from 'src/app/models/ILogin';
 import { FavoritosService } from './favoritos.service';
@@ -9,7 +10,7 @@ import { FavoritosService } from './favoritos.service';
   styleUrls: ['./favoritos.component.css'],
 })
 export class FavoritosComponent implements OnInit {
-  constructor(private favoritoService: FavoritosService) {}
+  constructor(private favoritoService: FavoritosService, private jogoService: JogoService) {}
 
   favoritos: any = [];
 
@@ -25,7 +26,7 @@ export class FavoritosComponent implements OnInit {
   remover(id: string) {
     this.favoritoService
       .remover(id)
-      .subscribe(() => console.log('Jogo removido dos favoritos.'));
+      .subscribe(() => this.jogoService.showMessage('Jogo removido dos favoritos!'));
 
     window.location.reload();
   }

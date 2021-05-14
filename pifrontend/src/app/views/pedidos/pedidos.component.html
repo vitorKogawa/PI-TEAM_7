@@ -1,4 +1,4 @@
-<div class="mat-elevation-z6 container_table">
+<div class="mat-elevation-z6 container_table" *ngIf="pagamentos.length != 0">
     <table mat-table [dataSource]="pagamentos" class="full-width-table">
 
         <ng-container matColumnDef="id">
@@ -29,16 +29,16 @@
         <ng-container matColumnDef="status">
             <th class="titulo" mat-header-cell *matHeaderCellDef>Status</th>
             <td mat-cell *matCellDef="let row">
-                <mat-icon class="mat-18" *ngIf="row.status != 0">done</mat-icon>
-                <mat-icon class="mat-18" *ngIf="row.status != 1">cancel</mat-icon>
+                <p *ngIf="row.status != 0">Pago</p>
+                <p *ngIf="row.status != 1">Pendente</p>
             </td>
         </ng-container>
 
         <ng-container matColumnDef="action">
             <th class="titulo coluna" mat-header-cell *matHeaderCellDef>Ações</th>
             <td mat-cell *matCellDef="let row">
-                <button mat-fab color="warn" *ngIf="row.status != 1" (click)="aprovarPagamento(row.id)">
-                  <mat-icon class="mat-18">done</mat-icon>
+                <button mat-raised-button color="warn" *ngIf="row.status != 1" (click)="aprovarPagamento(row.id)">
+                  <mat-icon class="mat-18">check_circle</mat-icon>
                 </button>
                 <a *ngIf="row.status != 0" class="edit">
                     <i class="material-icons icon">
@@ -51,4 +51,11 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+</div>
+
+
+<div class="nothing-wrapper" *ngIf="pagamentos.length <= 0">
+    <img src="../../../assets/img/undraw_empty_xct9.svg" alt="imagem de nenhum pedido registrado ainda.">
+    <h1>Você ainda não realizou nenhum pedido em nossa plataforma</h1>
+    <a routerLink="/home">Ver catálogo de jogos</a>
 </div>

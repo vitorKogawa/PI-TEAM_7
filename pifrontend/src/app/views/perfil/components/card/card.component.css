@@ -1,10 +1,23 @@
-#card-perfil .card-wrapper {
+.card-wrapper {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    padding: 20px;
 }
 
-#card-perfil .card-wrapper .card-wrapper-item {
-    width: 150px;
+.card-wrapper .card-wrapper-item {
+    width: 20%;
     height: 250px;
     margin: 0 20px;
+    /* border: 1px solid yellow; */
+    margin: 10px;
+    background-color: #4d4c55;
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+.card-wrapper-item:hover {
+    transform: translateY(-10px);
 }

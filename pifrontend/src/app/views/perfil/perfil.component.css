@@ -1,5 +1,23 @@
 #perfil {
     width: 100%;
+    min-height: 100vh;
+    background-color: #151d27;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+mat-expansion-panel {
+    width: 100%;
+    height: auto;
+    margin: 20px;
+    background-color: #ddd;
+    color: #fff;
+}
+
+mat-panel-title {
+    font-size: 20px;
 }
 
 #perfil #AtualizarPerfil {

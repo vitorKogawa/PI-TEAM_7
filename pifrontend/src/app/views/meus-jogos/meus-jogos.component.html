@@ -1,0 +1,20 @@
+<div class="card-wrapper">
+    <h1>Sua Biblioteca de Jogos</h1>
+    <div class="card-item-wrapper">
+        <mat-card class="card-wrapper-item" *ngFor="let jogo of jogos">
+            <img matCardImage src="http://localhost:3333/jogo/file/{{ jogo.imageUrl }}" alt="imagem jogo">
+            <mat-card-header class="flex-display-center">
+                <mat-card-title class="text-align-center">{{ jogo.nome }}</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-actions class="button-wrapper">
+                <!-- <button (click)="adicionarFavorito(jogo.id)" class="btn-favorite">
+              <mat-icon>favorite</mat-icon>
+            </button>
+            <button (click)="comprar(jogo.id)" class="btn-comprar">
+              R$ {{ jogo.preco }},00
+            </button> -->
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

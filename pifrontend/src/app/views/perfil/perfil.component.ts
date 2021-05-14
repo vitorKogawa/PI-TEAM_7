@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PerfilService } from './perfil.service';
 import { IUsuario } from '../../models/IUsuario';
+import { JogoService } from 'src/app/components/jogo/jogo.service';
 
 @Component({
   selector: 'app-perfil',
@@ -9,7 +10,7 @@ import { IUsuario } from '../../models/IUsuario';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor(private perfilServices: PerfilService) {}
+  constructor(private perfilServices: PerfilService, private jogoService: JogoService) {}
 
   abrir = true;
 
@@ -20,7 +21,7 @@ export class PerfilComponent implements OnInit {
     usuario: '',
     cpf: '',
   };
-  
+
   ngOnInit(): void {
     this.verificaoExpandir()
     this.BuscarUsuarioId(this.PegarToken())
@@ -56,13 +57,16 @@ export class PerfilComponent implements OnInit {
     }
 
     this.perfilServices.update(this.atualizarPerfil.id, data).subscribe(
-      () => this.ngOnInit(),
+      () => {
+        this.jogoService.showMessage('Dados atualizados com sucesso.')
+        this.ngOnInit()
+      },
       (error) => console.log(error)
     )
   }
 
   visualizarInformacao(): void {
-    
-  } 
+
+  }
 
 }

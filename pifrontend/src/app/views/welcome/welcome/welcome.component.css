@@ -1,7 +1,7 @@
 div.welcome-wrapper {
     width: 100%;
     height: 100vh;
-    background-color: #212121;
+    background-color: #151d27;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,20 +31,16 @@ button:hover {
     transform: translateY(-10px);
 }
 
-#fotos
-	{
-		flex-direction:row;
-		flex-wrap:wrap;
-	}
-	
-	#fotos h2
-	{
-		width:100%;
-		text-align:center;
-	}
-	
-	#fotos img
-	{
-		width:33.3333333%;
-	}
-	
+#fotos {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#fotos h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#fotos img {
+    width: 33.3333333%;
+}

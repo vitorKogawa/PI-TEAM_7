@@ -11,7 +11,7 @@ class JogoController {
         const { nome, preco, quantidade, descricao, espaco_arm, genero, status } =
         request.body;
 
-        console.log(request.file)
+        console.log(request.file);
 
         const newJogo = {
             nome,
@@ -23,7 +23,6 @@ class JogoController {
             status: status ? status : false,
             imageUrl: request.file.filename,
         };
-
 
         await Jogo.create(newJogo)
             .then((data) => {
@@ -61,7 +60,7 @@ class JogoController {
     }
 
     async findAll(request, response) {
-        Jogo.findAll({ limit: 5 })
+        Jogo.findAll()
             .then((data) => {
                 response.send(data);
             })
@@ -70,7 +69,7 @@ class JogoController {
                     message: err.message || "Erro interno ao buscar jogo",
                 });
             });
-    };
+    }
 
     async findByPk(request, responseponse) {
         if (!request.params.id) {
@@ -92,17 +91,17 @@ class JogoController {
                     })
                 );
         }
-    };
+    }
 
     async findAllEnable(request, responseponse) {
-        Jogo.findAll({ where: { ativo: true } })
+        Jogo.findAll({ where: { status: true } })
             .then((data) => responseponse.status(200).json(data))
             .catch((error) =>
                 responseponse.status(500).json({
                     message: error.message || "Erro interno ao listar jogos ativos.",
                 })
             );
-    };
+    }
 
     async disableAll(request, responseponse) {
         Jogo.update({ status: false }, { where: {} })
@@ -114,10 +113,10 @@ class JogoController {
                     message: error.message || "Erro interno ao excluir jogos.",
                 })
             );
-    };
+    }
 
-    async disableByPk(request, responseponse) {
-        Jogo.update({ status: false }, { where: {} })
+    async disableByPk(request, response) {
+        Jogo.update({ status: false }, { where: { id: request.params.id } })
             .then((data) =>
                 responseponse.status(200).json({ message: "Jogos excluidos." })
             )
@@ -126,7 +125,28 @@ class JogoController {
                     message: error.message || "Erro interno ao excluir jogos.",
                 })
             );
-    };
+    }
+
+    async findAllPaidOut(request, response) {
+        const userId = request.userId;
+
+        Jogo.sequelize
+            .query(
+                `select tu.id, tu.nome username, tj.nome jogo, tj.genero, tj.preco, tp.status from tb_pagamento tp
+        inner join tb_jogo tj on tp.cod_jogo = tj.id
+        inner join tb_usuario tu on tp.cod_usuario = tu.id
+        where tp.status = 1 and tu.id = ${userId};`
+            )
+            .then((data) => response.status(200).json(data))
+            .catch((error) =>
+                response
+                .status(500)
+                .json({
+                    message: error.message ||
+                        `Erro interno na listagem dos jogos pagos pelo usuário de id ${userId}`,
+                })
+            );
+    }
 }
 
 export default new JogoController();

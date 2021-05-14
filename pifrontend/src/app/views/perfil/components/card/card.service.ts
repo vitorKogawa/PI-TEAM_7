@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IUsuario } from 'src/app/models/IUsuario';
 
-const baseUrl = 'http://localhost:3333/pagamento/aprovar';
+const baseUrl = 'http://localhost:3333/pagamento';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,7 @@ export class CardService {
   constructor(private http: HttpClient) {}
 
   get(id: number): Observable<any> {
-    return this.http.get(`${baseUrl}/${id}`);
+    return this.http.get(`${baseUrl}/usuario/${id}`);
   }
 
   getJogo(id: number): Observable<any> {

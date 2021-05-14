@@ -13,18 +13,23 @@ export class JogoService {
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
   showMessage(msg: string): void {
-    this.snackBar.open(msg, 'X', {
+    this.snackBar.open(msg, 'OK', {
       duration: 3000,
       horizontalPosition: 'right',
       verticalPosition: 'top',
+      panelClass: ['msg-sucess']
     });
   }
-  create(jogo: IJogo): Observable<IJogo> {
-    return this.http.post<IJogo>(this.baseUrl, jogo);
+  create(jogo: any): Observable<boolean> {
+    return this.http.post<boolean>(this.baseUrl, jogo);
   }
 
   read(): Observable<IJogo[]> {
     return this.http.get<IJogo[]>(this.baseUrl);
+  }
+
+  readEnable(): Observable<IJogo[]> {
+    return this.http.get<IJogo[]>(`${this.baseUrl}/enable`);
   }
 
   readById(id: string | null): Observable<IJogo> {
@@ -38,8 +43,8 @@ export class JogoService {
   }
 
   delete(id: string | undefined):Observable<IJogo> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<IJogo>(url);
+    const url = `${this.baseUrl}/disable/${id}`
+    return this.http.put<IJogo>(url, {});
   }
 
   upload(files: Set<File>, url: string){

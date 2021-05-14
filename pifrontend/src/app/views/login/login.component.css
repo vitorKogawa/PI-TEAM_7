@@ -1,144 +1,204 @@
-mat-card {
-  background-color: #9f9f9f;
-  width: 30%;
-  height: 800px;
+/* .container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    background-image: url("../.././../assets/img/mario.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 10px solid #000;
 }
 
-mat-form-field {
-  font-size: 14px;
-}
-
-.container {
-  background-image: url('/assets/img/mario.png');
-  background-position: center;
-  max-width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0;
-  padding: 0px;
-}
-
-mat-card-title {
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-size: 3vw;
-  text-align: center;
-  margin-top: 120px;
-  margin-bottom: 40px;
+form {
+    flex: 0.3;
+    background-color: #212121;
+    width: 100%;
+    border: 10px solid #000;
 }
 
 .logo img {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  height: 160px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 160px;
 }
 
 .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .aLink {
-  color: white;
-  font-size: 12px;
-  text-align: center;
-  text-decoration: none;
-  margin-bottom: 10px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
 }
 
 .formulario {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 button {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 5px;
-  font-size: 15px;
-  color: white;
-  margin-top: 30px;
-  background-color: #f28705;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    margin-top: 30px;
+    background-color: #f28705;
 }
 
 nav ul {
-  list-style: none;
-  margin-top: 20px;
+    list-style: none;
+    margin-top: 20px;
 }
 
 nav ul li {
-  display: inline-block;
-  padding: 10px;
+    display: inline-block;
+    padding: 10px;
 }
 
 nav ul li a:after {
-  content: '';
-  width: 0%;
-  height: 2px;
-  background-color: #f28705;
-  display: block;
-  transition: 0.5s;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #f28705;
+    display: block;
+    transition: 0.5s;
 }
 
 nav ul li:hover a:after {
-  width: 100%;
+    width: 100%;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: #fff;
 }
 
 ::ng-deep .mat-focused .mat-form-field-label {
-  /*change color of label*/
-  color: white !important;
+    color: white !important;
 }
 
 ::ng-deep.mat-form-field-underline {
-  /*change color of underline*/
-  background-color: white !important;
+    background-color: white !important;
 }
 
 ::ng-deep.mat-form-field-ripple {
-  /*change color of underline when focused*/
-  background-color: #f28705 !important;
-  ;
+    background-color: #f28705 !important;
 }
 
 @media (max-width: 575px) {
-
-  mat-card {
-    width: 100%;
-  }
-
-  mat-card-title {
-    font-size: 43px;
-  }
+    mat-card {
+        width: 100%;
+    }
+    mat-card-title {
+        font-size: 43px;
+    }
 }
 
 @media (max-width: 768px) {
-
-  mat-card {
-    width: 100%;
-  }
-
-  mat-card-title {
-    font-size: 43px;
-  }
+    mat-card {
+        width: 100%;
+    }
+    mat-card-title {
+        font-size: 43px;
+    }
 }
 
 @media (max-width: 979px) {
+    mat-card {
+        width: 100%;
+    }
+    button {
+        align-content: center;
+    }
+} */
 
-  mat-card {
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: #ffa500 !important;
+}
 
+ ::ng-deep .mat-form-field-underline {
+    /*change color of underline*/
+    background-color: #ffa500 !important;
+}
+
+::ng-deep .mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: #ffa500 !important;
+    ;
+}
+
+::ng-deep .mat-form-field-placeholder {
+    color: #ffa500;
+}
+
+::ng-deep .mat-focused .mat-form-field-placeholder {
+    color: #ffa500;
+}
+
+.mat-form-field-empty.mat-form-field-label {
+    color: #ffa500;
+}
+
+.login-wrapper {
     width: 100%;
-  }
+    min-height: 100vh;
+    background-image: url('../../../assets/img/mario.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
 
-  button {
-    align-content: center;
-  }
+form {
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #151d27;
+    opacity: 0.96;
+}
 
+mat-form-field,
+button {
+    width: 80%;
+}
+
+button {
+    border: 1px solid #ffa500;
+    color: #212121;
+    background-color: #ffa500;
+    transition: .3s ease-in-out;
+    margin: 20px 0px;
+}
+
+nav {
+    margin: 10px 0px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #ffa500;
+    transition: .3s ease-in-out;
+    margin: 0px 5px;
+}
+
+a:hover {
+    color: #ffa500;
 }

@@ -1,12 +1,9 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-import { userRouter } from "./routes/users.routes";
-import { authRouter } from "./routes/authenticate.routes";
-import { pagamentoRouter } from "./routes/pagamento.routes";
-import { tipoPagamentoRouter } from "./routes/tipo_pagamento.routes";
-import { jogoRouter } from "./routes/jogos.routes";
-import { favoritosRoutes } from "./routes/favoritos.routes";
+import { sharedRouter } from "./routes/shared.routes";
+import { privateRouter } from "./routes/private.routes";
+import middleware_authenticate from "./middleware/authenticate.middleware";
 import "./database/index";
 
 class App {
@@ -24,12 +21,9 @@ class App {
     }
 
     routes() {
-        this.server.use(userRouter);
-        this.server.use(authRouter);
-        this.server.use(pagamentoRouter);
-        this.server.use(jogoRouter);
-        this.server.use(tipoPagamentoRouter);
-        this.server.use(favoritosRoutes);
+        this.server.use(sharedRouter);
+        // this.server.use(middleware_authenticate());
+        this.server.use(privateRouter);
     }
 }
 

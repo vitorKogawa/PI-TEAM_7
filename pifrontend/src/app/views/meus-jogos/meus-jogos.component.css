@@ -1,0 +1,33 @@
+.card-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: column;
+    flex-flow: row wrap;
+    padding: 10px;
+    background-color: #151d27;
+}
+
+.card-wrapper>h1 {
+    font-weight: bold;
+    color: #fff;
+    font-size: 30px;
+}
+
+.card-item-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    transition: .3s ease-in-out;
+}
+
+mat-card:hover {
+    transform: translateY(-10px);
+}

@@ -1,31 +1,30 @@
 <div class="cadastroUsuario">
     <div class="formCadastro">
-        <h2>Create account</h2>
-
         <form action="">
+            <h2>Create account</h2>
             <input [(ngModel)]="cadastroUsuario.nome" name="nome" type="text" placeholder="Nome">
 
             <input [(ngModel)]="cadastroUsuario.cpf" name="cpf" type="text" placeholder="CPF">
 
-            <input [(ngModel)]="cadastroUsuario.usuario" name="usuario" type="text" placeholder="Username">
+            <input [(ngModel)]="cadastroUsuario.usuario" name="usuario" type="text" placeholder="Nome de Usuário">
 
             <input [(ngModel)]="cadastroUsuario.email" name="email" type="email" placeholder="E-mail">
 
-            <input [(ngModel)]="cadastroUsuario.senha" name="senha" type="password" placeholder="Password">
+            <input [(ngModel)]="cadastroUsuario.senha" name="senha" type="password" placeholder="Senha">
 
-            <input [(ngModel)]="confirmarSenha" name="confrimarSenha" type="password" placeholder="Confirm your Password">
+            <input [(ngModel)]="confirmarSenha" name="confrimarSenha" type="password" placeholder="Confirme a sua senha">
 
             <p id="avisoCadastro" *ngIf="!senhasIguais">Confirmar senha Precisa ser igual senha</p>
 
-            <button (click)="saveCadastroUsuario()">Create</button>
+            <button (click)="saveCadastroUsuario()">Criar conta</button>
 
-            <p>already have an account ? <a href="/login">Sign in</a></p>
+            <p>Já possui uma conta?<a href="/login">Login</a></p>
         </form>
     </div>
-    <div id="ImgCadastro">
+    <!-- <div id="ImgCadastro">
         <div class="item" id="item-1">
             <p>Cadastre-se</p>
             <p>Curta todos os jogos do nosso catalogo</p>
         </div>
-    </div>
+    </div> -->
 </div>

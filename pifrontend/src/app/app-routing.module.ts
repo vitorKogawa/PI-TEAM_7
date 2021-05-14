@@ -16,6 +16,7 @@ import { Error404Component } from './views/error/error404/error404/error404.comp
 import { WelcomeComponent } from './views/welcome/welcome/welcome.component';
 import { FavoritosComponent } from './views/favoritos/favoritos.component';
 import { AllUsuariosComponent } from './views/usuarios/all-usuarios.component';
+import { MeusJogosComponent } from './views/meus-jogos/meus-jogos.component';
 
 const routes: Routes = [
   {
@@ -57,26 +58,17 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
-    path: 'administrador',
-    component: AdministradorComponent
-  },
-  {
-    path: 'loginAdm',
-    component: LoginAdmComponent,
-  },
-  {
     path: 'cadastroUsuario',
     component: CadastrarUsuarioComponent,
-    canActivate: [AuthGuardService],
   },
   {
     path: 'favoritos',
     component: FavoritosComponent,
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService],
   },
   {
-    path: "perfil",
-    component: PerfilComponent
+    path: 'perfil',
+    component: PerfilComponent,
   },
   {
     path: 'pedidos',
@@ -85,7 +77,11 @@ const routes: Routes = [
   {
     path: 'usuarios',
     component: AllUsuariosComponent,
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'meus-jogos',
+    component: MeusJogosComponent,
   },
   {
     path: '',

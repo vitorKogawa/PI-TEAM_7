@@ -1,33 +1,38 @@
 <div id="perfil">
-
+    <!-- ATUALIZAÇÃO DOS DADOS CADASTRAIS -->
     <mat-expansion-panel [expanded]="abrir">
         <mat-expansion-panel-header>
             <mat-panel-title>Minhas Informações</mat-panel-title>
+            <mat-panel-description>
+                Aqui você pode alterar as suas informações cadastrais.
+            </mat-panel-description>
         </mat-expansion-panel-header>
 
-        
-    <div id="AtualizarPerfil">
 
-        <form action="">
-            <input id="inputAtualizarNome" [(ngModel)]="atualizarPerfil.nome" name="nome" type="text" placeholder="Nome" >
+        <div id="AtualizarPerfil">
 
-            <input id="inputAtualizarCPF" [(ngModel)]="atualizarPerfil.cpf" name="cpf" type="text" placeholder="CPF" >
+            <form action="">
+                <input id="inputAtualizarNome" [(ngModel)]="atualizarPerfil.nome" name="nome" type="text" placeholder="Nome">
 
-            <input id="inputAtualizarUsuario" [(ngModel)]="atualizarPerfil.usuario" name="usuario" type="text" placeholder="Username" >
+                <input id="inputAtualizarCPF" [(ngModel)]="atualizarPerfil.cpf" name="cpf" type="text" placeholder="CPF">
 
-            <input id="inputAtualizarEmail" [(ngModel)]="atualizarPerfil.email" name="email" type="email" placeholder="E-mail" >
-        </form>
-        <button (click)="AtualizarUsuario()" >Atualizar </button>
-    </div>
+                <input id="inputAtualizarUsuario" [(ngModel)]="atualizarPerfil.usuario" name="usuario" type="text" placeholder="Username">
+
+                <input id="inputAtualizarEmail" [(ngModel)]="atualizarPerfil.email" name="email" type="email" placeholder="E-mail">
+            </form>
+            <button (click)="AtualizarUsuario()">Atualizar </button>
+        </div>
     </mat-expansion-panel>
 
+    <!-- VISUALIZAR JOGOS -->
     <mat-expansion-panel [expanded]="!abrir">
-        <mat-expansion-panel-header>Meus Jogos</mat-expansion-panel-header>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Meus Jogos</mat-panel-title>
+            <mat-panel-description>Aqui você pode visualizar todos os jogos da sua biblioteca na Avagames.</mat-panel-description>
+        </mat-expansion-panel-header>
 
         <div id="meusJogosPerfil">
             <app-card></app-card>
         </div>
     </mat-expansion-panel>
-
-    
 </div>

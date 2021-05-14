@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { JogoService } from 'src/app/components/jogo/jogo.service';
 import { IUsuario } from '../../models/IUsuario';
 import { CadastroUsuarioService } from './cadastro-usuario.service';
 
@@ -9,7 +10,7 @@ import { CadastroUsuarioService } from './cadastro-usuario.service';
   styleUrls: ['./cadastrar-usuario.component.css'],
 })
 export class CadastrarUsuarioComponent implements OnInit {
-  constructor(private cadastroUsuarioService: CadastroUsuarioService, private router: Router) {}
+  constructor(private cadastroUsuarioService: CadastroUsuarioService, private router: Router, private jogoService: JogoService) {}
 
   cadastroUsuario: IUsuario = {
     nome: '',
@@ -38,7 +39,10 @@ export class CadastrarUsuarioComponent implements OnInit {
       };
 
       this.cadastroUsuarioService.create(data).subscribe(
-        () => this.router.navigate(['/login']),
+        () => {
+          this.jogoService.showMessage('Usuário cadastrado com sucesso!')
+          this.router.navigate(['/login'])
+        },
         (error: any) => {
           console.log(error);
         }
