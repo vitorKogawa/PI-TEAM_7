@@ -52,32 +52,20 @@
     font-size: 15px;
     color: white;
     margin-top: 30px;
-    background-color: #f28705;
+    background-color: #212121;
   }
     
   
-  nav ul li:hover a:after {
-    width: 100%;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
   ::ng-deep .mat-focused .mat-form-field-label {
-    /*change color of label*/
-    color: white !important;
+    color: #212121 !important;
   }
   
   ::ng-deep.mat-form-field-underline {
-    /*change color of underline*/
     background-color: white !important;
   }
   
   ::ng-deep.mat-form-field-ripple {
-    /*change color of underline when focused*/
-    background-color: #f28705 !important;
+    background-color: #212121 !important;
     ;
   }
   
