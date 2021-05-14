@@ -13,19 +13,15 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
     this.BuscarJogosUsuario(this.PegarToken());
-    console.log(this.jogos)
   }
 
-  ListaCodigoJogos = [];
   jogos: Array<any> = [];
   
   BuscarJogosUsuario(id: number): void {
     this.cardService.get(id).subscribe(
       (data) => {
-        this.ListaCodigoJogos = data.map((e:any) => {
-          this.BuscarJogo(e.cod_jogo);
-          return e.cod_jogo
-        });
+        this.jogos = data[0]
+        console.log(this.jogos)
       },
       (error) => console.log(error)
     )
@@ -36,19 +32,6 @@ export class CardComponent implements OnInit {
 
     if(token != null)
       return JSON.parse(token).user.id
-  }
-
-  BuscarJogo(id: number): void{
-    this.cardService.getJogo(id).subscribe(
-      (data) => {
-        this.FormatarArrayJogos(data)
-      },
-      (error) => console.log(error)
-    )
-  }
-
-  FormatarArrayJogos(jogo: any): void{
-    this.jogos[jogo.id] = jogo
   }
 
 }

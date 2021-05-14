@@ -75,7 +75,7 @@ class PagamentoController {
             const { id } = request.params;
             Pagamento.sequelize
                 .query(
-                    `select p.id, u.nome as username, j.nome as game, j.preco, tp.descricao , p.status, p.createdAt from tb_pagamento as p inner join tb_usuario as u on p.cod_usuario  = u.id inner join tb_jogo as j on p.cod_jogo = j.id inner join tb_tipo_pagamento as tp on p.cod_tipo_pagamento = tp.id  where p.cod_usuario = ${id} order by p.id asc;`
+                    `select p.id, u.nome as username, j.imageUrl, j.nome as game, j.preco, tp.descricao , p.status, p.createdAt from tb_pagamento as p inner join tb_usuario as u on p.cod_usuario  = u.id inner join tb_jogo as j on p.cod_jogo = j.id inner join tb_tipo_pagamento as tp on p.cod_tipo_pagamento = tp.id  where p.cod_usuario = ${id} order by p.id asc;`
                 )
                 .then((data) => {
                     response.json(data);

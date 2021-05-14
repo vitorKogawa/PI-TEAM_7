@@ -33,5 +33,8 @@
     margin: 0 auto 20px;
     background-color: #ffa500;
     color: white;
-    
+}
+
+#perfil #meusJogosPerfil {
+    margin: 10px;
 }

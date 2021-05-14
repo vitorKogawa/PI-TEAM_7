@@ -1,0 +1,10 @@
+#card-perfil .card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#card-perfil .card-wrapper .card-wrapper-item {
+    width: 150px;
+    height: 250px;
+    margin: 0 20px;
+}

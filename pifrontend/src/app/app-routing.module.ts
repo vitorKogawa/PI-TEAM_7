@@ -61,6 +61,10 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
   {
+    path: "perfil",
+    component: PerfilComponent
+  },
+  {
     path: 'pedidos',
     component: PedidosComponent
   },

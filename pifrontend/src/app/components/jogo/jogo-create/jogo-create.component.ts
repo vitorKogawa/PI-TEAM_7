@@ -41,10 +41,10 @@ export class JogoCreateComponent implements OnInit {
   }
 
   onUpload() {
-    //if (this.files && this.files.size > 0){
-      //this.jogoService.upload(this.files,'') .subscribe
-      //(response => console.log('Upload Concluído'));
-    //}
+    if (this.files && this.files.size > 0){
+      this.jogoService.upload(this.files,'') .subscribe
+      (response => console.log('Upload Concluído'));
+    }
     console.log(this.files)
   }
 
