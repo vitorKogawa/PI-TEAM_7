@@ -1,0 +1,31 @@
+div.welcome-wrapper {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url("/assets/img/tela_adm.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #212121;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    margin:15px;
+    transition: .3s ease-in-out; 
+}
+
+button:hover {
+    background-color: #f28705;
+    color: #212121;
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+

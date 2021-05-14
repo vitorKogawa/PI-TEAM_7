@@ -14,6 +14,8 @@ import { PerfilComponent } from './views/perfil/perfil.component';
 import { AuthGuardService } from './guards/auth/auth-guard.service';
 import { Error404Component } from './views/error/error404/error404/error404.component';
 import { WelcomeComponent } from './views/welcome/welcome/welcome.component';
+import { AdministradorComponent } from './views/administrador/administrador.component';
+import { LoginAdmComponent } from './views/login-adm/login-adm.component';
 
 
 const routes: Routes = [
@@ -56,6 +58,14 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
   {
+    path: 'administrador',
+    component: AdministradorComponent
+  },
+  {
+    path: 'loginAdm',
+    component: LoginAdmComponent,
+  },
+  {
     path: 'cadastroUsuario',
     component: CadastrarUsuarioComponent,
     canActivate: [AuthGuardService]
@@ -68,7 +78,7 @@ const routes: Routes = [
     path: 'pedidos',
     component: PedidosComponent
   },
-{
+  {
     path: '',
     redirectTo: '/login',
     pathMatch: 'full'
@@ -76,7 +86,7 @@ const routes: Routes = [
   {
     path: '**',
     component: Error404Component
-  }
+  },
 ];
 
 @NgModule({

@@ -30,3 +30,21 @@ button:hover {
     cursor: pointer;
     transform: translateY(-10px);
 }
+
+#fotos
+	{
+		flex-direction:row;
+		flex-wrap:wrap;
+	}
+	
+	#fotos h2
+	{
+		width:100%;
+		text-align:center;
+	}
+	
+	#fotos img
+	{
+		width:33.3333333%;
+	}
+	

@@ -29,40 +29,40 @@ export class JogoCreateComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  OnChange(event: any){  
-    const selectElements = <FileList>event.srcElement.files;   
-    const FileNames = [];
-    this.files = new Set();
+  // OnChange(event: any){  
+  //   const selectElements = <FileList>event.srcElement.files;   
+  //   const FileNames = [];
+  //   this.files = new Set();
 
-    for (let i = 0; i < selectElements.length; i++){
-      FileNames.push(selectElements[i].name)
-      this.files.add(selectElements[i]);
-    }
-  }
+  //   for (let i = 0; i < selectElements.length; i++){
+  //     FileNames.push(selectElements[i].name)
+  //     this.files.add(selectElements[i]);
+  //   }
+  // }
 
-  onUpload() {
-    if (this.files && this.files.size > 0){
-      this.jogoService.upload(this.files,'') .subscribe
-      (response => console.log('Upload Concluído'));
-    }
-    console.log(this.files)
-  }
+  // onUpload() {
+  //   //if (this.files && this.files.size > 0){
+  //     //this.jogoService.upload(this.files,'') .subscribe
+  //     //(response => console.log('Upload Concluído'));
+  //   //}
+  //   console.log(this.files)
+  // }
 
-  createJogo(): void {
-    const fd = new FormData();
-    fd.set("name", this.jogo.nome)
-    fd.set("preco", this.jogo.preco)
-    fd.set("descricao", this.jogo.descricao)
-    fd.set("espaco_arm",this.jogo.espaco_arm)
-    fd.set("genero",this.jogo.genero)
-    fd.set("status",this.jogo.status)
-    fd.append("file",this.files.slice(),file.name)
+  // createJogo(): void {
+  //   const fd = new FormData();
+  //   fd.set("name", this.jogo.nome)
+  //   fd.set("preco", this.jogo.preco)
+  //   fd.set("descricao", this.jogo.descricao)
+  //   fd.set("espaco_arm",this.jogo.espaco_arm)
+  //   fd.set("genero",this.jogo.genero)
+  //   fd.set("status",this.jogo.status)
+  //   fd.append("file",this.files.slice(),file.name)
 
-    this.jogoService.create(this.jogo).subscribe(() => {
-      this.jogoService.showMessage('Jogo cadastrado com sucesso!');
-      this.router.navigate(['/jogos']);
-    });
-  }
+  //   this.jogoService.create(this.jogo).subscribe(() => {
+  //     this.jogoService.showMessage('Jogo cadastrado com sucesso!');
+  //     this.router.navigate(['/jogos']);
+  //   });
+  //}
   cancel(): void {
     this.router.navigate(['/jogos']);
   }
