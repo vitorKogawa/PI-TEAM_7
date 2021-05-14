@@ -1,26 +1,34 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ILogin } from 'src/app/models/ILogin';
 import { IPagamento } from 'src/app/models/IPagamento';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class PagamentoService {
+export class PagamentoService implements OnInit{
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
-  baseUrl: string = "http://localhost:3333/pagamento";
+  ngOnInit(): void {
+  }
 
-  create(pagamento: IPagamento): Observable<IPagamento>{
+  baseUrl: string = 'http://localhost:3333/pagamento';
+
+  create(pagamento: IPagamento): Observable<IPagamento> {
     return this.httpClient.post<IPagamento>(this.baseUrl, pagamento);
   }
 
-  read(): Observable<IPagamento[]>{
+  read(): Observable<IPagamento[]> {
     return this.httpClient.get<IPagamento[]>(this.baseUrl);
   }
 
-  aprovarPagamento(id: string | null){
-    this.httpClient.put(`${this.baseUrl}/aprovar/${id}`, {});
+  readUser(userId: number): Observable<IPagamento[]> {
+    return this.httpClient.get<IPagamento[]>(`${this.baseUrl}/usuario/${userId}`);
+  }
+
+  aprovarPagamento(id: string | null): Observable<boolean> {
+    return this.httpClient.put<boolean>(`${this.baseUrl}/${id}`, {});
   }
 }

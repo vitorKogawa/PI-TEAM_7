@@ -50,6 +50,8 @@ import { Error404Component } from './views/error/error404/error404/error404.comp
 import { WelcomeComponent } from './views/welcome/welcome/welcome.component';
 import { PedidosComponent } from './views/pedidos/pedidos.component';
 import { CardComponent } from './views/perfil/components/card/card.component';
+import { FavoritosComponent } from './views/favoritos/favoritos.component';
+import { AllUsuariosComponent } from './views/usuarios/all-usuarios.component';
 registerLocaleData (localePt);
 
 @NgModule({
@@ -72,10 +74,12 @@ registerLocaleData (localePt);
     JogoUpdateComponent,
     JogoDeleteComponent,
     PerfilComponent,
-    CardComponent
+    CardComponent,
     Error404Component,
     WelcomeComponent,
-    PedidosComponent
+    PedidosComponent,
+    FavoritosComponent,
+    AllUsuariosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ILogin } from 'src/app/models/ILogin';
 import { IPagamento } from 'src/app/models/IPagamento';
 import { PagamentoService } from '../pagamento/pagamento.service';
 
@@ -21,17 +22,35 @@ export class PedidosComponent implements OnInit {
     'action',
   ];
 
+  userId: number = 0;
+  status_adm: boolean = false;
+
   ngOnInit(): void {
-    this.pagamentoService.read().subscribe((pagamentos) => {
-      console.log(pagamentos[0]);
-      this.pagamentos = pagamentos[0];
-    });
+    const json = JSON.parse(String(sessionStorage.getItem('token'))) as ILogin;
+    this.userId = json.user.id;
+    this.status_adm = json.user.status_adm;
+
+    if(!this.status_adm)
+      this.displayedColumns.pop()
+
+    if (json.user.status_adm) {
+      this.pagamentoService.read().subscribe((pagamentos) => {
+        // console.log(pagamentos[0]);
+        this.pagamentos = pagamentos[0];
+      });
+    } else {
+      this.pagamentoService.readUser(json.user.id).subscribe((pagamentos) => {
+        // console.log(pagamentos[0]);
+        this.pagamentos = pagamentos[0];
+      });
+    }
   }
 
   aprovarPagamento(id: string | null) {
-    console.log('PAREI AQUI........');
-    // this.pagamentoService
-    //   .aprovarPagamento(id)
-    //   .subscribe((data) => console.log(data));
+    this.pagamentoService
+      .aprovarPagamento(id)
+      .subscribe((data) => alert('Pagamento aprovado com sucesso.'));
+
+    window.location.reload();
   }
 }

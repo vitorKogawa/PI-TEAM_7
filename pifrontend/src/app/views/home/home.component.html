@@ -20,10 +20,18 @@
                 <mat-icon class="mat-18">article</mat-icon>
                 Pedidos
             </a>
-            <a routerLink="/home">
-                <mat-icon class="mat-18">favorite</mat-icon>
-                Favoritos
+
+            <a routerLink="/usuarios" *ngIf="status_adm">
+                <mat-icon class="mat-18">supervisor_account</mat-icon>
+                Usuários
             </a>
+
+            <a routerLink="/jogos" *ngIf="status_adm">
+                <mat-icon class="mat-18">check_circle</mat-icon>
+                + Jogos
+            </a>
+
+
             <button (click)="logout()">Sair</button>
         </div>
     </div>
@@ -32,7 +40,6 @@
         <div class="carousel-img">
             <app-carrousel-teste></app-carrousel-teste>
         </div>
-        <app-barrapesquisa class="pesquisar"></app-barrapesquisa>
         <app-card-slider></app-card-slider>
         <app-featured-game></app-featured-game>
         <app-card-slider></app-card-slider>

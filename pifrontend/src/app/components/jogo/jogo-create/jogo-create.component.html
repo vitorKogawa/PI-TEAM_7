@@ -17,18 +17,9 @@
                 <input matInput placeholder="Gêreno" [(ngModel)]="jogo.genero" name="genero">
             </mat-form-field>
 
-            <input class="input" type='file' name="file" id="file" [(ngModel)]="jogo.imageUrl"
-                (change)="OnChange($event)">
-            <button mat-raised-button type="button" (click)="onUpload()">
-                UPLOAD
-            </button>
-            
-
-            <button mat-raised-button (click)="createJogo()" color="basic">
+            <input class="input" type='file' name="file" id="file" (change)="onChange($event)">
+            <button mat-raised-button (click)="create()" color="basic">
                 SALVAR
-            </button>
-            <button mat-raised-button (click)="cancel()" color="basic">
-                CANCELAR
             </button>
         </form>
     </mat-card>

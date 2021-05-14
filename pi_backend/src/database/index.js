@@ -4,8 +4,9 @@ import User from "../models/tb_usuario";
 import Jogo from "../models/tb_jogo";
 import TipoPagamento from "../models/tb_tipo_pagamento";
 import Pagamento from "../models/tb_pagamento";
+import Favoritos from '../models/tb_favoritos'
 
-const models = [User, Jogo, TipoPagamento, Pagamento];
+const models = [User, Jogo, TipoPagamento, Pagamento, Favoritos];
 
 class Database {
     constructor() {

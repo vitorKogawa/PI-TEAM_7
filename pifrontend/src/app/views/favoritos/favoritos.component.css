@@ -1,0 +1,62 @@
+.container_table {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.titulo {
+    background-color: #696969;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    background-color: #DCDCDC;
+    text-align: center;
+}
+
+.mat-header-cell,
+.mat-cell {
+    text-align: center;
+    color: black;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px
+}
+
+.edit {
+    margin-right: 15px;
+}
+
+.edit>i {
+    color: #4682B4;
+}
+
+.delete>i {
+    color: #d11507;
+}
+
+.coluna {
+    width: 10%;
+    text-align: center;
+}
+
+button {
+    /* width: 40px;
+    height: 40px; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+@media (max-width: 575px) {
+    .icon {
+        flex-direction: column;
+    }
+}

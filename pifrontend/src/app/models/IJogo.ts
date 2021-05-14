@@ -7,4 +7,5 @@ export interface IJogo {
   genero?: string;
   status?: boolean;
   imageUrl?: string;
+  file?: any
 }

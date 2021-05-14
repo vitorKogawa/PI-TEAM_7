@@ -27,5 +27,4 @@ export class BarrapesquisaComponent implements OnInit {
 
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
-
 }

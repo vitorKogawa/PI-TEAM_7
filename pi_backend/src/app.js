@@ -6,6 +6,7 @@ import { authRouter } from "./routes/authenticate.routes";
 import { pagamentoRouter } from "./routes/pagamento.routes";
 import { tipoPagamentoRouter } from "./routes/tipo_pagamento.routes";
 import { jogoRouter } from "./routes/jogos.routes";
+import { favoritosRoutes } from "./routes/favoritos.routes";
 import "./database/index";
 
 class App {
@@ -28,7 +29,8 @@ class App {
         this.server.use(pagamentoRouter);
         this.server.use(jogoRouter);
         this.server.use(tipoPagamentoRouter);
+        this.server.use(favoritosRoutes);
     }
 }
 
-export default new App().server
+export default new App().server;
