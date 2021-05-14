@@ -1,0 +1,106 @@
+.container {
+    background-color: #9f9f9f;
+    width: 100%;
+    margin-top: 100px;
+  }
+  
+  mat-form-field {
+    font-size: 14px;
+  }
+  
+  mat-card-title {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 40px;
+  }
+  
+  .logo img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 160px;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .aLink {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    height: 520px;
+  }
+  
+  button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    margin-top: 30px;
+    background-color: #212121;
+  }
+    
+  
+  ::ng-deep .mat-focused .mat-form-field-label {
+    color: #212121 !important;
+  }
+  
+  ::ng-deep.mat-form-field-underline {
+    background-color: white !important;
+  }
+  
+  ::ng-deep.mat-form-field-ripple {
+    background-color: #212121 !important;
+    ;
+  }
+  
+  @media (max-width: 575px) {
+  
+    mat-card {
+      width: 100%;
+    }
+  
+    mat-card-title {
+      font-size: 43px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    mat-card {
+      width: 100%;
+    }
+  
+    mat-card-title {
+      font-size: 43px;
+    }
+  }
+  
+  @media (max-width: 979px) {
+  
+    mat-card {
+  
+      width: 100%;
+    }
+  
+    button {
+      align-content: center;
+    }
+  
+  }
+  

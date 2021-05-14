@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IUsuario } from 'src/app/models/IUsuario';
 
-const baseUrl = 'http://localhost:3333/pagamento/usuario';
+const baseUrl = 'http://localhost:3333/pagamento/aprovar';
 
 @Injectable({
   providedIn: 'root',

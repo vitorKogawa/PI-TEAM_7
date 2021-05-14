@@ -1,6 +1,12 @@
 <div id="perfil">
+
+    <mat-expansion-panel [expanded]="abrir">
+        <mat-expansion-panel-header>
+            <mat-panel-title>Minhas Informações</mat-panel-title>
+        </mat-expansion-panel-header>
+
+        
     <div id="AtualizarPerfil">
-        <h2>Minhas Informações</h2>
 
         <form action="">
             <input id="inputAtualizarNome" [(ngModel)]="atualizarPerfil.nome" name="nome" type="text" placeholder="Nome" >
@@ -13,10 +19,15 @@
         </form>
         <button (click)="AtualizarUsuario()" >Atualizar </button>
     </div>
+    </mat-expansion-panel>
 
-    <div>
-        <h2>Meus Jogos</h2>
+    <mat-expansion-panel [expanded]="!abrir">
+        <mat-expansion-panel-header>Meus Jogos</mat-expansion-panel-header>
 
-        <app-card></app-card>
-    </div>
+        <div id="meusJogosPerfil">
+            <app-card></app-card>
+        </div>
+    </mat-expansion-panel>
+
+    
 </div>

@@ -57,6 +57,14 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
+    path: 'administrador',
+    component: AdministradorComponent
+  },
+  {
+    path: 'loginAdm',
+    component: LoginAdmComponent,
+  },
+  {
     path: 'cadastroUsuario',
     component: CadastrarUsuarioComponent,
     canActivate: [AuthGuardService],
@@ -65,6 +73,10 @@ const routes: Routes = [
     path: 'favoritos',
     component: FavoritosComponent,
     canActivate: [AuthGuardService]
+  },
+  {
+    path: "perfil",
+    component: PerfilComponent
   },
   {
     path: 'pedidos',

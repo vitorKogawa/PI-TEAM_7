@@ -11,6 +11,8 @@ export class PerfilComponent implements OnInit {
 
   constructor(private perfilServices: PerfilService) {}
 
+  abrir = true;
+
   atualizarPerfil: IUsuario = {
     id: 5,
     nome: '',
@@ -20,7 +22,12 @@ export class PerfilComponent implements OnInit {
   };
   
   ngOnInit(): void {
+    this.verificaoExpandir()
     this.BuscarUsuarioId(this.PegarToken())
+  }
+
+  verificaoExpandir():void {
+    this.abrir = sessionStorage.getItem("expandirPerfil")? true: false
   }
 
   PegarToken(): any{

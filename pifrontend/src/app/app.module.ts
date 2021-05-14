@@ -30,6 +30,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarrouselTesteComponent } from './views/carrousel-teste/carrousel-teste.component';
 import { JogoReadComponent } from './components/jogo/jogo-read/jogo-read.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { CarouselCardsComponent } from './components/template/carousel-cards/carousel-cards.component';
 import { BarrapesquisaComponent } from './components/template/barrapesquisa/barrapesquisa.component';
@@ -102,7 +103,8 @@ registerLocaleData (localePt);
     FontAwesomeModule,
     ReactiveFormsModule,
     MatIconModule,
-    NgbModule
+    NgbModule,
+    MatExpansionModule
   ],
   providers: [
     {
