@@ -15,7 +15,7 @@ export class WelcomeComponent implements OnInit {
   }
 
   toLogin(): void{
-    this.router.navigate(['/login'])
+    this.router.navigate(['/loginAdm'])
   }
 
 }

@@ -1,17 +1,15 @@
 <div class="container">
-    <mat-card>
-        <form class="formulario">
-            <mat-card-title>Administrador
-            </mat-card-title>
-            <mat-form-field>
-                <input matInput placeholder="E-mail:" [(ngModel)]="credentials.email" name="email">
-            </mat-form-field>
-            <mat-form-field>
-                <input type='password' matInput placeholder="Senha:" [(ngModel)]="credentials.senha" name="senha">
-            </mat-form-field>
-            <button mat-raised-button type="submit" (click)="login()">
-                Login
-            </button>
-        </form>
-    </mat-card>
+    <form class="formulario">
+        <mat-card-title>Administrador
+        </mat-card-title>
+        <mat-form-field>
+            <input matInput placeholder="E-mail:" [(ngModel)]="credentials.email" name="email">
+        </mat-form-field>
+        <mat-form-field>
+            <input type='password' matInput placeholder="Senha:" [(ngModel)]="credentials.senha" name="senha">
+        </mat-form-field>
+        <button mat-raised-button type="submit" (click)="login()">
+            Login
+        </button>
+    </form>
 </div>
